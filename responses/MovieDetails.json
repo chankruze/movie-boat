@@ -1,0 +1,68 @@
+{
+    "status": "ok",
+    "status_message": "Query was successful",
+    "data": {
+        "movie": {
+            "id": 21557,
+            "url": "https:\/\/yts.mx\/movies\/the-cabin-2013",
+            "imdb_code": "tt2989422",
+            "title": "The Cabin",
+            "title_english": "The Cabin",
+            "title_long": "The Cabin (2013)",
+            "slug": "the-cabin-2013",
+            "year": 2013,
+            "rating": 7.8,
+            "runtime": 30,
+            "genres": [
+                "Horror",
+                "Thriller"
+            ],
+            "download_count": 1818,
+            "like_count": 3,
+            "description_intro": "A single woman, Laura, meets a nice guy, John, on an online dating site. After a few dates he invites her to his vacation cabin in the mountains. Laura ignores the warnings from her friend, Ashley, about it being too soon to go away with a guy she just met. Once at the secluded cabin, Laura begins to notice strange behavior changes in John. She also begins to be drawn to the crawlspace under the cabin. Is this all in her head, or is there a deeper, darker secret to be uncovered?",
+            "description_full": "A single woman, Laura, meets a nice guy, John, on an online dating site. After a few dates he invites her to his vacation cabin in the mountains. Laura ignores the warnings from her friend, Ashley, about it being too soon to go away with a guy she just met. Once at the secluded cabin, Laura begins to notice strange behavior changes in John. She also begins to be drawn to the crawlspace under the cabin. Is this all in her head, or is there a deeper, darker secret to be uncovered?",
+            "yt_trailer_code": "",
+            "language": "en",
+            "mpa_rating": "",
+            "background_image": "https:\/\/yts.mx\/assets\/images\/movies\/the_cabin_2013\/background.jpg",
+            "background_image_original": "https:\/\/yts.mx\/assets\/images\/movies\/the_cabin_2013\/background.jpg",
+            "small_cover_image": "https:\/\/yts.mx\/assets\/images\/movies\/the_cabin_2013\/small-cover.jpg",
+            "medium_cover_image": "https:\/\/yts.mx\/assets\/images\/movies\/the_cabin_2013\/medium-cover.jpg",
+            "large_cover_image": "https:\/\/yts.mx\/assets\/images\/movies\/the_cabin_2013\/large-cover.jpg",
+            "torrents": [
+                {
+                    "url": "https:\/\/yts.mx\/torrent\/download\/63C6B55DBEB071A40AAC221102CD21F0ADAAB13F",
+                    "hash": "63C6B55DBEB071A40AAC221102CD21F0ADAAB13F",
+                    "quality": "720p",
+                    "type": "web",
+                    "seeds": 0,
+                    "peers": 0,
+                    "size": "751.3 MB",
+                    "size_bytes": 787795149,
+                    "date_uploaded": "2020-09-26 12:45:06",
+                    "date_uploaded_unix": 1601117106
+                },
+                {
+                    "url": "https:\/\/yts.mx\/torrent\/download\/9CA49510538735C059F1D412A44BB36D60C112E8",
+                    "hash": "9CA49510538735C059F1D412A44BB36D60C112E8",
+                    "quality": "1080p",
+                    "type": "web",
+                    "seeds": 0,
+                    "peers": 0,
+                    "size": "1.36 GB",
+                    "size_bytes": 1460288881,
+                    "date_uploaded": "2020-09-26 14:42:37",
+                    "date_uploaded_unix": 1601124157
+                }
+            ],
+            "date_uploaded": "2020-09-26 12:45:06",
+            "date_uploaded_unix": 1601117106
+        }
+    },
+    "@meta": {
+        "server_time": 1601148644,
+        "server_timezone": "CET",
+        "api_version": 2,
+        "execution_time": "0 ms"
+    }
+}
