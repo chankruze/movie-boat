@@ -11,7 +11,9 @@ require('dotenv').config()
 const express = require('express'),
     cors = require('cors'),
     os = require('os'),
-    path = require('path')
+    path = require('path'),
+    { graphqlHTTP } = require('express-graphql'),
+    schema = require('./schemas')
 
 
 // init express app
@@ -20,7 +22,14 @@ const app = express()
 app.use(cors())
 
 // routes if any
-require('./routes/testRoute')(app)
+// require('./routes/testRoute')(app)
+
+app.use('/api',
+    graphqlHTTP({
+        schema,
+        graphiql: true,
+    })
+)
 
 // GET endpoints for prod
 if (process.env.NODE_ENV === 'production') {
