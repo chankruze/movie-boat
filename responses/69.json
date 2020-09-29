@@ -1,0 +1,94 @@
+{
+  "data": {
+    "movie": {
+      "id": 69,
+      "url": "https://yts.mx/movies/a-brilliant-young-mind-2014",
+      "imdb_code": "tt3149038",
+      "title": "A Brilliant Young Mind",
+      "title_english": "A Brilliant Young Mind",
+      "title_long": "A Brilliant Young Mind (2014)",
+      "slug": "a-brilliant-young-mind-2014",
+      "year": 2014,
+      "rating": 7.1,
+      "runtime": 111,
+      "genres": [
+        "Action",
+        "Comedy",
+        "Drama",
+        "Romance"
+      ],
+      "download_count": 308394,
+      "like_count": 170,
+      "description_intro": "In a world difficult to comprehend, Nathan struggles to connect with those around him - most of all his loving mother - but finds comfort in numbers. When Nathan is taken under the wing of unconventional and anarchic teacher, Mr. Humphreys, the pair forge an unusual friendship and Nathan's talents win him a place on the UK team at the International Mathematics Olympiad. From suburban England to bustling Taipei and back again, Nathan builds complex relationships as he is confronted by the irrational nature of love.",
+      "description_full": "In a world difficult to comprehend, Nathan struggles to connect with those around him - most of all his loving mother - but finds comfort in numbers. When Nathan is taken under the wing of unconventional and anarchic teacher, Mr. Humphreys, the pair forge an unusual friendship and Nathan's talents win him a place on the UK team at the International Mathematics Olympiad. From suburban England to bustling Taipei and back again, Nathan builds complex relationships as he is confronted by the irrational nature of love.",
+      "yt_trailer_code": "tWAS-q2PpnA",
+      "language": "en",
+      "mpa_rating": "",
+      "background_image": "https://yts.mx/assets/images/movies/a_brilliant_young_mind_2014/background.jpg",
+      "background_image_original": "https://yts.mx/assets/images/movies/a_brilliant_young_mind_2014/background.jpg",
+      "small_cover_image": "https://yts.mx/assets/images/movies/a_brilliant_young_mind_2014/small-cover.jpg",
+      "medium_cover_image": "https://yts.mx/assets/images/movies/a_brilliant_young_mind_2014/medium-cover.jpg",
+      "large_cover_image": "https://yts.mx/assets/images/movies/a_brilliant_young_mind_2014/large-cover.jpg",
+      "medium_screenshot_image1": "https://yts.mx/assets/images/movies/a_brilliant_young_mind_2014/medium-screenshot1.jpg",
+      "medium_screenshot_image2": "https://yts.mx/assets/images/movies/a_brilliant_young_mind_2014/medium-screenshot2.jpg",
+      "medium_screenshot_image3": "https://yts.mx/assets/images/movies/a_brilliant_young_mind_2014/medium-screenshot3.jpg",
+      "large_screenshot_image1": "https://yts.mx/assets/images/movies/a_brilliant_young_mind_2014/large-screenshot1.jpg",
+      "large_screenshot_image2": "https://yts.mx/assets/images/movies/a_brilliant_young_mind_2014/large-screenshot2.jpg",
+      "large_screenshot_image3": "https://yts.mx/assets/images/movies/a_brilliant_young_mind_2014/large-screenshot3.jpg",
+      "date_uploaded": "2015-10-31 20:56:13",
+      "date_uploaded_unix": 1446321373,
+      "torrents": [
+        {
+          "url": "https://yts.mx/torrent/download/16E9D15B017104C123C3D2ED10598DDF5437F708",
+          "hash": "16E9D15B017104C123C3D2ED10598DDF5437F708",
+          "quality": "720p",
+          "type": "bluray",
+          "seeds": "20",
+          "peers": "1",
+          "size": "813.92 MB",
+          "size_bytes": 853456978,
+          "date_uploaded": "2015-10-31 20:56:13",
+          "date_uploaded_unix": 1446321373
+        },
+        {
+          "url": "https://yts.mx/torrent/download/EEFDB5FB0EA693A75FEBF320F7C86461ECE86507",
+          "hash": "EEFDB5FB0EA693A75FEBF320F7C86461ECE86507",
+          "quality": "1080p",
+          "type": "bluray",
+          "seeds": "42",
+          "peers": "7",
+          "size": "1.64 GB",
+          "size_bytes": 1760936591,
+          "date_uploaded": "2015-10-31 20:56:16",
+          "date_uploaded_unix": 1446321376
+        }
+      ],
+      "cast": [
+        {
+          "name": "Asa Butterfield",
+          "character_name": "Nathan Ellis",
+          "url_small_image": "https://yts.mx/assets/images/actors/thumb/nm2633535.jpg",
+          "imdb_code": "2633535"
+        },
+        {
+          "name": "Eddie Marsan",
+          "character_name": "Richard",
+          "url_small_image": "https://yts.mx/assets/images/actors/thumb/nm0550371.jpg",
+          "imdb_code": "0550371"
+        },
+        {
+          "name": "Rafe Spall",
+          "character_name": "Martin Humphreys",
+          "url_small_image": "https://yts.mx/assets/images/actors/thumb/nm1245863.jpg",
+          "imdb_code": "1245863"
+        },
+        {
+          "name": "Sally Hawkins",
+          "character_name": "Julie Ellis",
+          "url_small_image": "https://yts.mx/assets/images/actors/thumb/nm1020089.jpg",
+          "imdb_code": "1020089"
+        }
+      ]
+    }
+  }
+}

@@ -10,7 +10,7 @@ const { GraphQLObjectType, GraphQLString, GraphQLInt, GraphQLSchema } = require(
 
 
 // import schemas
-const MovieType = require('./movieSchema')
+const MovieType = require('./movieType')
 const API_V2 = 'https://yts.mx/api/v2/'
 const MOVIE_DETAILS = 'movie_details.json?with_images=true&with_cast=true&movie_id='
 

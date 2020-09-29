@@ -7,7 +7,9 @@ Copyright (c) Geekofia 2020 and beyond
 
 const { GraphQLInt, GraphQLString,
     GraphQLFloat, GraphQLList,
-    GraphQLObjectType } = require('graphql')
+    GraphQLObjectType } = require('graphql'),
+    TorrentType = require('./torrentType'),
+    CastType = require('./castType')
 
 // Movie Type
 const MovieType = new GraphQLObjectType({
@@ -42,30 +44,14 @@ const MovieType = new GraphQLObjectType({
         large_screenshot_image1: { type: GraphQLString },
         large_screenshot_image2: { type: GraphQLString },
         large_screenshot_image3: { type: GraphQLString },
+        date_uploaded: { type: GraphQLString },
+        date_uploaded_unix: { type: GraphQLInt },
         torrents: { type: new GraphQLList(TorrentType) },
-        date_uploaded: { type: GraphQLString },
-        date_uploaded_unix: { type: GraphQLInt }
+        cast: { type: new GraphQLList(CastType) }
     })
 })
 
-// Torrent Type
-const TorrentType = new GraphQLObjectType({
-    name: 'Torrent',
-    fields: () => ({
-        url: { type: GraphQLString },
-        hash: { type: GraphQLString },
-        quality: { type: GraphQLString },
-        type: { type: GraphQLString },
-        seeds: { type: GraphQLString },
-        peers: { type: GraphQLString },
-        size: { type: GraphQLString },
-        size_bytes: { type: GraphQLInt },
-        date_uploaded: { type: GraphQLString },
-        date_uploaded_unix: { type: GraphQLInt }
-    })
-})
-
-// Apollo Req
+// Req
 // {
 //     movie(movie_id: 69) {
 //         id
@@ -111,6 +97,12 @@ const TorrentType = new GraphQLObjectType({
 //             date_uploaded
 //             date_uploaded_unix
 //         }
+//         cast {
+//             name
+//             character_name
+//             url_small_image
+//             imdb_code
+//           }
 //     }
 // }
 
