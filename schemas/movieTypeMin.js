@@ -5,7 +5,7 @@ Created: Sun Sep 27 2020 18:44:08 GMT+0530 (India Standard Time)
 Copyright (c) Geekofia 2020 and beyond
 */
 
-const { GraphQLInt, GraphQLString, GraphQLObjectType } = require('graphql')
+const { GraphQLInt, GraphQLString, GraphQLObjectType, GraphQLList } = require('graphql')
 const MovieType = require('./movieType')
 
 // Torrent Type
