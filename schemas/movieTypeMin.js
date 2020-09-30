@@ -13,10 +13,9 @@ const MovieTypeMin = new GraphQLObjectType({
     name: 'MovieTypeMinimum',
     fields: () => ({
         id: { type: GraphQLInt },
-        url: { type: GraphQLString },
+        medium_cover_image: { type: GraphQLString },
         title: { type: GraphQLString },
         year: { type: GraphQLInt },
-        type: { type: GraphQLString },
         rating: { type: GraphQLString },
         genres: { type: new GraphQLList(GraphQLString) }
     })
