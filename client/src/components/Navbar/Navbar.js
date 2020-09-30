@@ -21,7 +21,7 @@ function Navbar() {
                     <BiCameraMovie />
                 </h1>
                 <h1 className={styles.title}>
-                    geekofia
+                    MovieBoat
                 </h1>
             </div>
             <div className={styles.linksWrapper}>

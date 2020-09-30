@@ -12,15 +12,6 @@ font-family: 'Poppins', sans-serif;
 font-family: 'Righteous', cursive;
 font-family: 'Roboto', sans-serif; */
 
-:root {
-  --txt-green: #6ac045;
-  --color-title: #6ac045;
-  --color-primary-link: #d4d4d4;
-  --color-dark-link: #bebebe;
-  --bg-dark: #1d1d1d;
-  --bg-primary: #663399;
-}
-
 /* Main Navbar */
 .navbar {
   /* Remove user agent stylesheet */
@@ -36,6 +27,7 @@ font-family: 'Roboto', sans-serif; */
   max-width: 100vw;
   /* padding-left: 32px;
   padding-right: 32px; */
+  border-bottom: 1px solid #2f2f2f;
 }
 
 .navbar.bgDark {
@@ -72,8 +64,8 @@ font-family: 'Roboto', sans-serif; */
 .brandWrapper .logo {
   /* Remove user agent stylesheet */
   margin: 0;
-  padding: 0;
-  font-size: 3.4rem;
+  padding: 4px;
+  font-size: 3.2rem;
   margin: auto;
 }
 
