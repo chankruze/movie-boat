@@ -33,7 +33,7 @@ Copyright (c) Geekofia 2020 and beyond
 /* Movie Card Top (Cover Image) */
 .movieCard .movieCardTop .movieCardCover {
   min-width: 230px;
-  min-height: 345px;
+  min-height: 386px;
   width: 100%;
 }
 
