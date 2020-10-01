@@ -7,6 +7,7 @@ Copyright (c) Geekofia 2020 and beyond
 
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { AiFillStar } from 'react-icons/ai'
 import styles from './MovieCard.module.css'
 
 function MovieCard(props) {
@@ -32,7 +33,7 @@ function MovieCard(props) {
 
                 {/* Hidden Movie Info */}
                 <div className={styles.movieInfo}>
-                    <h2>{ratingFloat}</h2>
+                    <h2><AiFillStar color="#5da93c"/><br/>{rating} / 10</h2>
                     <ul className={styles.genresList}>
                         {
                             genres.map(gen => <li>{gen}</li>)

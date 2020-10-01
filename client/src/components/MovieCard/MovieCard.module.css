@@ -5,6 +5,8 @@ Created: Tue Sep 29 2020 22:35:08 GMT+0530 (India Standard Time)
 Copyright (c) Geekofia 2020 and beyond
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@700&display=swap');
+
 .movieCard {
   padding: 0;
   margin-bottom: 2rem;
@@ -46,6 +48,7 @@ Copyright (c) Geekofia 2020 and beyond
   width: 100%;
   position: absolute;
   text-align: center;
+  vertical-align: middle;
   display: flex;
   flex-direction: column;
   transform: translateY(105%);
@@ -58,6 +61,10 @@ Copyright (c) Geekofia 2020 and beyond
   background-color: rgba(0, 0, 0, 0.8);
 }
 
+.movieInfo h2 {
+  font-family: 'Arimo', sans-serif;
+}
+
 .genresList {
   padding: 0;
   margin: 0;
@@ -67,17 +74,24 @@ Copyright (c) Geekofia 2020 and beyond
 .genresList li {
   font-size: 1.5rem;
   text-transform: capitalize;
+  margin-bottom: 0.2rem;
+  font-family: 'Arimo', sans-serif;
 }
 
 .buttonMovie {
   margin: auto;
   padding: 8px 16px 8px 16px;
   text-transform: capitalize;
-  background-color: #5da93c;
+  background-color: #3bc500;
   font-size: 1.1rem;
   color: #fff;
   text-decoration: none;
   cursor: pointer;
+  transition: background-color 300ms;
+}
+
+.buttonMovie:hover {
+  background-color: #2d8607;
 }
 
 /* Movie Card Top */
