@@ -7,11 +7,11 @@ Copyright (c) Geekofia 2020 and beyond
 
 import React from 'react'
 import { useQuery } from '@apollo/client'
-import querries from '../../graphql'
+import querries from '../../../graphql'
 
 // components
-import PageNav from '../PageNav/PageNav'
-import MovieGrid from '../MovieGrid/MovieGrid'
+import PageNav from '../../PageNav/PageNav'
+import MovieGrid from '../../MovieGrid/MovieGrid'
 
 // CSS
 import styles from './Home.module.css'
