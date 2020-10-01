@@ -33,13 +33,14 @@ function MovieCard(props) {
 
                 {/* Hidden Movie Info */}
                 <div className={styles.movieInfo}>
-                    <h2><AiFillStar color="#5da93c"/><br/>{rating} / 10</h2>
+                    <h2><AiFillStar color="#5da93c" /><br />{rating} / 10</h2>
                     <ul className={styles.genresList}>
                         {
                             genres.map((gen, index) => <li key={index}>{gen}</li>)
                         }
                     </ul>
-                    <Link to={`/movie/${id}`} className={styles.buttonMovie}>
+                    <Link to={`/movie/${id}`} rel="noopener noreferrer"
+                        className={styles.buttonMovie}>
                         more details
                     </Link>
                 </div>
