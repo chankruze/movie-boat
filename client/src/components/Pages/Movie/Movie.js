@@ -15,7 +15,7 @@ import querries from '../../../graphql/'
 function Movie(props) {
     const { movie_id } = props.match.params
     console.log(movie_id)
-    const { loading, error, data } = useQuery(querries.GQL_MOVIE, { variables: { movie_id } })
+    const { loading, error, data } = useQuery(querries.GQL_MOVIE, { variables: { movie_id: parseInt(movie_id) } })
 
     if (loading) {
         return (
@@ -33,9 +33,8 @@ function Movie(props) {
         )
     }
 
-    if (data) {
-        console.log(data)
-        // console.log(`Details for ${data.} ${(new Date()).toLocaleTimeString().slice(0, 7)}`)
+    if (data && data.movie) {
+        console.log(`Fetched details for "${data.movie.title}" at ${(new Date()).toLocaleTimeString().slice(0, 7)}`)
     }
 
     return (
