@@ -11,18 +11,19 @@ import styles from './MovieCard.module.css'
 function MovieCard(props) {
     const { movieData } = props
     const {
+        id,
         title,
         year,
         rating,
         genres,
-        coverImage
+        medium_cover_image
     } = movieData
 
     return (
         <div className={styles.MovieCard}>
             {/* Card Top */}
             <div className={styles.MovieCardTop}>
-                <img src={coverImage}
+                <img src={medium_cover_image}
                     alt={`cover for ${title}`}
                     className={styles.MovieCardCover} />
             </div>
@@ -41,4 +42,4 @@ function MovieCard(props) {
     )
 }
 
-export default MovieCard
+export default React.memo(MovieCard)
