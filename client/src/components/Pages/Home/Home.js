@@ -20,8 +20,7 @@ function Home() {
     const [limit, setLimit] = React.useState(48)
     const [page, setPage] = React.useState(1)
 
-    const { GQL_LATEST_MOVIES } = querries
-    const { loading, error, data } = useQuery(GQL_LATEST_MOVIES, { variables: { limit, page } })
+    const { loading, error, data } = useQuery(querries.GQL_LATEST_MOVIES, { variables: { limit, page } })
 
     if (loading) {
         return (

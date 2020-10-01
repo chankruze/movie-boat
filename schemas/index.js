@@ -6,7 +6,7 @@ Copyright (c) Geekofia 2020 and beyond
 */
 
 const axios = require('axios')
-const { GraphQLObjectType, GraphQLString, GraphQLInt, GraphQLSchema, GraphQLList } = require('graphql')
+const { GraphQLObjectType, GraphQLString, GraphQLInt, GraphQLSchema } = require('graphql')
 
 // import schemas
 const MovieType = require('./movieType')
