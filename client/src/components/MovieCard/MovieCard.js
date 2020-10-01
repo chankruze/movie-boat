@@ -34,9 +34,9 @@ function MovieCard(props) {
                     <p className={styles.title}>{title}</p>
                     <p className={styles.year}>{year}</p>
                 </div>
-                {/* <div className={styles.right}>
-                    <p className={styles.rating}>{rating}</p>
-                </div> */}
+                <div className={styles.right}>
+                    <p className={styles.rating}>{parseFloat(rating).toFixed(1)}</p>
+                </div>
             </div>
         </div>
     )

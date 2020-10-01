@@ -11,10 +11,11 @@ Copyright (c) Geekofia 2020 and beyond
   border: 0;
   display: inline-block;
   color: #fff;
-  background-color: #474747;
+  background-color: rebeccapurple;
   /*box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit;*/
   box-shadow: 0 0 5px 5px #313131;
-  max-width: 240px;
+  min-width: 260px;
+  max-width: 270px;
   text-align: start;
 }
 
@@ -49,10 +50,11 @@ Copyright (c) Geekofia 2020 and beyond
 .MovieCard .MovieCardBottom .left .title {
   font-size: 1.1rem;
   font-weight: bold;
-  width: 225px;
+  width: 215px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  padding-right: 4px;
 }
 
 .MovieCard .MovieCardBottom .left .year {
@@ -68,8 +70,8 @@ Copyright (c) Geekofia 2020 and beyond
 }
 
 .MovieCard .MovieCardBottom .right .rating {
-  padding: 4px 8px;
-  background: rebeccapurple;
+  padding: 0px 3px 3px 3px;
+  background: #313131;
   color: #fff;
   border-radius: 5px;
 }
