@@ -13,7 +13,7 @@ const Root = () => (
     <ApolloProvider client={client}>
       <React.Fragment>
         <Navbar />
-        {/* <Switch> */}
+        <Switch>
           {/* Home */}
           <Route exact path="/" component={Home} />
           {/* Trending */}
@@ -24,7 +24,7 @@ const Root = () => (
           {/* <Route exact path="/about" component={} /> */}
           {/* Movie */}
           <Route exact path="/movie/:movie_id" component={Movie} />
-        {/* </Switch> */}
+        </Switch>
       </React.Fragment>
     </ApolloProvider>
   </BrowserRouter>
