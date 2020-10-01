@@ -6,6 +6,7 @@ Copyright (c) Geekofia 2020 and beyond
 */
 
 import React from 'react'
+import { Link } from 'react-router-dom'
 import styles from './Navbar.module.css'
 import NavItems from './NavItems'
 import { BiCameraMovie } from 'react-icons/bi'
@@ -26,11 +27,11 @@ function Navbar() {
             </div>
             <div className={styles.linksWrapper}>
                 {
-                    NavItems.map(({ title, path, hoverClass }) => <a key={title} href={path} className={`${hoverClass} ${styles.link}`}>{title}</a>)
+                    NavItems.map(({ title, path, hoverClass }) => <Link to={path} key={title} className={`${hoverClass} ${styles.link}`}>{title}</Link>)
                 }
                 {/* <FlatNavButton payload={payloadLogin} /> */}
             </div>
-        </div>
+        </div >
     )
 }
 
