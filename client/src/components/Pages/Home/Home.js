@@ -46,7 +46,7 @@ function Home() {
     }
 
     return (
-        <div className={styles.homeWrapper}>
+        <div className={styles.homePage}>
             {/* <h1>Latest</h1> */}
             <MovieGrid movies={data.latestMovies.movies} />
 
