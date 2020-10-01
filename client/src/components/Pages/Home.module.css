@@ -16,22 +16,10 @@ Copyright (c) Geekofia 2020 and beyond
   /* display */
   /* display: flex;
   flex-wrap: wrap; */
+  color: #fff;
 }
 
-.homeWrapper .movieList {
-  display: grid;
-  /* grid-template-columns: repeat(auto-fill,minmax(240px, 1fr)); */
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  /* margin: auto; */
-  /* display: flex;
-  flex-wrap: wrap;
-  width: calc((240px + 2rem) * 4); */
-}
 
-.homeWrapper .movieList > * {
-  /* flex: 0 0 auto; */
-  justify-self: center;
-}
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
@@ -73,4 +61,13 @@ Copyright (c) Geekofia 2020 and beyond
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
 
+}
+
+.loader {
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+    text-align: center;
 }
