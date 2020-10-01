@@ -26,7 +26,7 @@ function Navbar() {
             </div>
             <div className={styles.linksWrapper}>
                 {
-                    NavItems.map(({ title, path, hoverClass }) => <a href={path} className={`${hoverClass} ${styles.link}`}>{title}</a>)
+                    NavItems.map(({ title, path, hoverClass }) => <a key={title} href={path} className={`${hoverClass} ${styles.link}`}>{title}</a>)
                 }
                 {/* <FlatNavButton payload={payloadLogin} /> */}
             </div>
@@ -34,4 +34,4 @@ function Navbar() {
     )
 }
 
-export default Navbar
+export default React.memo(Navbar)
