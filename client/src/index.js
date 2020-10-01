@@ -1,17 +1,38 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { ApolloProvider } from '@apollo/client'
+import client from './client'
 import './index.css'
-import App from './App'
+import Navbar from './components/Navbar/Navbar'
+import Home from './components/Pages/Home/Home'
+import Movie from './components/Pages/Movie/Movie'
 
-const client = new ApolloClient({
-  uri: `/api`,
-  cache: new InMemoryCache()
-})
-
-ReactDOM.render(
-  <ApolloProvider client={client}>
-    <App />
-  </ApolloProvider>,
-  document.getElementById('react-root')
+const Root = () => (
+  <BrowserRouter>
+    <ApolloProvider client={client}>
+      <React.Fragment>
+        <Navbar />
+        {/* <Switch> */}
+          {/* Home */}
+          <Route exact path="/" component={Home} />
+          {/* Trending */}
+          {/* <Route exact path="/trending" component={} /> */}
+          {/* Browse */}
+          {/* <Route exact path="/browse" component={} /> */}
+          {/* About */}
+          {/* <Route exact path="/about" component={} /> */}
+          {/* Movie */}
+          <Route exact path="/movie/:movie_id" component={Movie} />
+        {/* </Switch> */}
+      </React.Fragment>
+    </ApolloProvider>
+  </BrowserRouter>
 )
+
+ReactDOM.render(<Root />, document.getElementById('react-root'))
+
+if (module.hot) {
+  module.hot.accept()
+}
+
