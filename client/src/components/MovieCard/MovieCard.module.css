@@ -5,7 +5,7 @@ Created: Tue Sep 29 2020 22:35:08 GMT+0530 (India Standard Time)
 Copyright (c) Geekofia 2020 and beyond
 */
 
-.MovieCard {
+.movieCard {
   padding: 0;
   margin-bottom: 2rem;
   border: 0;
@@ -14,40 +14,97 @@ Copyright (c) Geekofia 2020 and beyond
   background-color: rebeccapurple;
   /*box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit;*/
   box-shadow: 0 0 5px 5px #313131;
-  min-width: 260px;
-  max-width: 270px;
+  min-width: 255px;
+  max-width: 260px;
   text-align: start;
 }
 
-.MovieCard .MovieCardTop {
+/* Movie Card Top */
+
+.movieCard .movieCardTop {
   padding: 0;
   margin: 0;
+  position: relative;
+  overflow: hidden;
 }
 
-.MovieCard .MovieCardTop .MovieCardCover {
+/* Movie Card Top (Cover Image) */
+.movieCard .movieCardTop .movieCardCover {
   min-width: 230px;
   min-height: 345px;
   width: 100%;
 }
 
-.MovieCard .MovieCardBottom {
+/* Movie Card Top (Hidden Info) */
+
+.movieCard .movieCardTop .movieInfo {
+  top: 0;
+  bottom: 0;
+  border: 0;
+  min-width: 230px;
+  min-height: 386px;
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(105%);
+  transition-delay: 50ms;
+  transition: background-color 600ms, transform 200ms ease-out;
+}
+
+.movieCard:hover .movieCardTop .movieInfo {
+  transform: translate(0%);
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.genresList {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.genresList li {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+.buttonMovie {
+  margin: auto;
+  padding: 8px 16px 8px 16px;
+  text-transform: capitalize;
+  background-color: #5da93c;
+  font-size: 1.1rem;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Movie Card Top */
+
+.movieCard .movieCardBottom {
+  margin-top: 0;
+  padding-top: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 4px 8px;
+  align-items: center;
 }
 
-.MovieCard .MovieCardBottom p {
+.movieCard .movieCardBottom p {
   margin: 0;
   padding: 0;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
 }
 
-.MovieCard .MovieCardBottom .left {
+.movieCard .movieCardBottom .left {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.MovieCard .MovieCardBottom .left .title {
+.movieCard .movieCardBottom .left .title {
   font-size: 1.1rem;
   font-weight: bold;
   width: 215px;
@@ -57,19 +114,19 @@ Copyright (c) Geekofia 2020 and beyond
   padding-right: 4px;
 }
 
-.MovieCard .MovieCardBottom .left .year {
+.movieCard .movieCardBottom .left .year {
   color: #e0e0e0;
   font-size: 0.9rem;
   letter-spacing: 1px;
 }
 
-.MovieCard .MovieCardBottom .right {
+.movieCard .movieCardBottom .right {
   margin-top: auto;
   margin-left: auto;
   margin-bottom: auto;
 }
 
-.MovieCard .MovieCardBottom .right .rating {
+.movieCard .movieCardBottom .right .rating {
   padding: 0px 3px 3px 3px;
   background: #313131;
   color: #fff;

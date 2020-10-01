@@ -6,6 +6,7 @@ Copyright (c) Geekofia 2020 and beyond
 */
 
 import React from 'react'
+import { Link } from 'react-router-dom'
 import styles from './MovieCard.module.css'
 
 function MovieCard(props) {
@@ -19,23 +20,38 @@ function MovieCard(props) {
         medium_cover_image
     } = movieData
 
+    const ratingFloat = parseFloat(rating).toFixed(1)
+
     return (
-        <div className={styles.MovieCard}>
+        <div className={styles.movieCard}>
             {/* Card Top */}
-            <div className={styles.MovieCardTop}>
+            <div className={styles.movieCardTop}>
                 <img src={medium_cover_image}
                     alt={`cover for ${title}`}
-                    className={styles.MovieCardCover} />
+                    className={styles.movieCardCover} />
+
+                {/* Hidden Movie Info */}
+                <div className={styles.movieInfo}>
+                    <h2>{ratingFloat}</h2>
+                    <ul className={styles.genresList}>
+                        {
+                            genres.map(gen => <li>{gen}</li>)
+                        }
+                    </ul>
+                    <Link to={`/movie/${id}`} className={styles.buttonMovie}>
+                        more details
+                    </Link>
+                </div>
             </div>
 
             {/* Card Bottom */}
-            <div className={styles.MovieCardBottom}>
+            <div className={styles.movieCardBottom}>
                 <div className={styles.left}>
                     <p className={styles.title}>{title}</p>
                     <p className={styles.year}>{year}</p>
                 </div>
                 <div className={styles.right}>
-                    <p className={styles.rating}>{parseFloat(rating).toFixed(1)}</p>
+                    <p className={styles.rating}>{ratingFloat}</p>
                 </div>
             </div>
         </div>
