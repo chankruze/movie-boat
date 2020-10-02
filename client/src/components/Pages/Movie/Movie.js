@@ -20,17 +20,25 @@ function Movie(props) {
     const { movie_id } = props.match.params // string
 
     // GET movie details
-    const { loading, error, data } = useQuery(querries.GQL_MOVIE, { variables: { movie_id: parseInt(movie_id) } })
+    const { loading: movieLoading, error: movieError, data: movieData } = useQuery(querries.GQL_MOVIE, { variables: { movie_id: parseInt(movie_id) } })
+    const { loading: relMovieLoading, error: relMovieError, data: relMovieData } = useQuery(querries.GQL_RELATED_MOVIES, { variables: { movie_id: parseInt(movie_id) } })
 
-    if (loading) {
+    if (movieLoading) {
         return (
             <h4 className={styles.loader}>
                 Fetching Movie Details...
             </h4>)
     }
 
-    if (error) {
-        console.log(error)
+    if (relMovieLoading) {
+        return (
+            <h4 className={styles.loader}>
+                Fetching Retaled Movies...
+            </h4>)
+    }
+
+    if (movieError) {
+        console.log(movieError)
         return (
             <h2 className={styles.loader}>
                 Error Fetching Movie ;(
@@ -38,15 +46,30 @@ function Movie(props) {
         )
     }
 
-    if (data && data.movie) {
-        console.log(`Fetched details for "${data.movie.title}" at ${(new Date()).toLocaleTimeString()}`)
+    if (relMovieError) {
+        console.log(relMovieError)
+        return (
+            <h2 className={styles.loader}>
+                Error Fetching Related Movies ;(
+            </h2>
+        )
     }
+
+    if (movieData && movieData.movie) {
+        console.log(`Fetched details for "${movieData.movie.title}" at ${(new Date()).toLocaleTimeString()}`)
+    }
+
+    if (relMovieData && relMovieData.relatedMovies) {
+        console.log(`Fetched related movies for "${movieData.movie.title}" at ${(new Date()).toLocaleTimeString()}`)
+    }
+
+    document.title = `${movieData.movie.title} (${movieData.movie.year})`
 
     return (
         <div className={styles.moviePage}>
-            <MovieContext.Provider value={data.movie}>
+            <MovieContext.Provider value={movieData.movie}>
                 {/* Top */}
-                <TopLayout />
+                <TopLayout relatedMovies={relMovieData.relatedMovies} />
                 {/* Middle */}
                 {/* Bottom */}
             </MovieContext.Provider>
