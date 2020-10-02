@@ -20,13 +20,17 @@ function Home() {
     const [limit, setLimit] = React.useState(48)
     const [page, setPage] = React.useState(1)
 
+    React.useEffect(() => {
+        document.title = "MovieBoat: HD YIFY Movies in Smallest Size"
+    }, [])
+
     const { loading, error, data } = useQuery(querries.GQL_LATEST_MOVIES, { variables: { limit, page } })
 
     if (loading) {
         return (
             <h4 className={styles.loader}>
                 Fetching Latest Movies...
-                <br/>
+                <br />
                 Page {page}
             </h4>)
     }
