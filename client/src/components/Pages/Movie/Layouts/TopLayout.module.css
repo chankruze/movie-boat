@@ -16,16 +16,17 @@ Copyright (c) Geekofia 2020 and beyond
 
 /* Left */
 
-.topWrapper .left {
+.left {
   display: flex;
   flex-direction: column;
+  margin-right: 2rem;
 }
 
-.left .imgCover {
+.imgCover {
   border: 2px solid #fff;
 }
 
-.left .btnDownload {
+.btnDownload {
   border: 0;
   margin-top: 1rem;
   padding: 0.5rem;
@@ -37,7 +38,7 @@ Copyright (c) Geekofia 2020 and beyond
   vertical-align: middle;
 }
 
-.left .btnDownload svg {
+.btnDownload svg {
   vertical-align: middle;
   margin-right: 5px;
   margin-top: -2px;
@@ -45,32 +46,37 @@ Copyright (c) Geekofia 2020 and beyond
 
 /* Middle Portion */
 
-.topWrapper .middle {
+.middle {
   display: flex;
   flex-direction: column;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  width: 30%;
 }
 
-.middle .title{
-    margin-top: 0;
-    font-size: 2.5rem;
+.title {
+  margin: 0;
+  font-size: 2.5rem;
 }
 
-.middle .yearGenres {
+.year {
+  margin-bottom: 0;
+}
+
+.genres {
+  margin-top: 0.5rem;
   font-size: 1.2rem;
   /* line-height: 1.8rem; */
   font-family: "Arimo", sans-serif;
 }
 
-.middle .qualityWrapper {
+.qualityWrapper {
   /* display: flex;
   flex-direction: row;
   flex-wrap: wrap; */
-  margin-top: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
-.middle .qualityWrapper a {
+.qualityWrapper a {
   padding: 0rem 0.5rem 0.2rem 0.5rem;
   text-decoration: none;
   color: #fff;
@@ -80,12 +86,12 @@ Copyright (c) Geekofia 2020 and beyond
   background-color: #272727;
 }
 
-.middle .subtitleWrapper {
-  margin-top: 2rem;
+.subtitleWrapper {
+  margin-top: 1rem;
 }
 
-.middle .subtitleWrapper a {
-  padding: 0rem 0.5rem 0.2rem 0.5rem;
+.subtitleWrapper a {
+  padding: 0rem 1rem 0.2rem 1rem;
   color: #fff;
   background-color: #272727;
   border: 1px solid #525252;
@@ -93,20 +99,40 @@ Copyright (c) Geekofia 2020 and beyond
   text-transform: capitalize;
 }
 
-.middle .subtitleWrapper a svg {
+.subtitleWrapper a:hover,
+.qualityWrapper a:hover {
+    color: var(--bg-green);
+}
+
+.subtitleWrapper a svg {
   vertical-align: middle;
   margin-right: 5px;
   margin-top: -2px;
+  color: var(--bg-green);
 }
 
-.middle .ratingWrapper {
-    margin-top: 2rem;
+.ratingWrapper {
+  margin-top: 2rem;
 }
 
 /* Right */
 
-.topWrapper .right {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+.right {
+  width: 20%;
+  align-items: flex-start;
+  margin-left: 5rem;
 }
+
+.relatedMoviesWrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(142px, 1fr));
+}
+
+.titleRelatedMovies {
+  margin-top: 0;
+  font-size: 1rem;
+}
+
+/* .relatedMoviesWrapper > *{
+  justify-self: center;
+} */

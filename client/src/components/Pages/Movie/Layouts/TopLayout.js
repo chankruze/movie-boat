@@ -17,10 +17,14 @@ import { AiFillStar } from 'react-icons/ai'
 // CSS
 import styles from './TopLayout.module.css'
 
-function TopLayout() {
+import RelatedMovieCard from '../../../MovieCard/RelatedMovieCard'
+
+function TopLayout(props) {
     const context = React.useContext(MovieContext)
+    const { relatedMovies } = props
 
     const {
+        id,
         title,
         year,
         genres,
@@ -58,8 +62,8 @@ function TopLayout() {
             {/* Middle */}
             <div className={styles.middle}>
                 <h1 className={styles.title}>{title}</h1>
-                <h2 className={styles.yearGenres}>
-                    {year} <br />
+                <h2 className={styles.year}>{year}</h2>
+                <h2 className={styles.genres}>
                     {
                         genres.map((genre, index, genresRef) =>
                             <span key={index}>{genre}{index < (genresRef.length - 1) ? ' / ' : ''}</span>
@@ -89,8 +93,13 @@ function TopLayout() {
 
             {/* Right */}
             <div className={styles.right}>
-                {/* Related Movies */}
-
+                <h2 className={styles.titleRelatedMovies}>Related Movies</h2>
+                <div className={styles.relatedMoviesWrapper}>
+                    {/* Related Movies */}
+                    {
+                        relatedMovies.map((movieData, index) => <RelatedMovieCard movieData={movieData} />)
+                    }
+                </div>
             </div>
         </div>
     )
