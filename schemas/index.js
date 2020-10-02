@@ -10,7 +10,7 @@ const { GraphQLObjectType, GraphQLString, GraphQLInt, GraphQLSchema } = require(
 
 // import schemas
 const MovieType = require('./movieType')
-const MoviesListType = require('./MoviesListType')
+const MoviesListType = require('./moviesListType')
 
 // API URLs
 const API_V2 = 'https://yts.mx/api/v2/'

@@ -9,7 +9,8 @@ const { GraphQLInt, GraphQLString,
     GraphQLFloat, GraphQLList,
     GraphQLObjectType } = require('graphql'),
     TorrentType = require('./torrentType'),
-    CastType = require('./castType')
+    CastType = require('./castType'),
+    AvailableInType = require('./availableInType')
 
 // Movie Type
 const MovieType = new GraphQLObjectType({
@@ -47,7 +48,16 @@ const MovieType = new GraphQLObjectType({
         date_uploaded: { type: GraphQLString },
         date_uploaded_unix: { type: GraphQLInt },
         torrents: { type: new GraphQLList(TorrentType) },
-        cast: { type: new GraphQLList(CastType) }
+        cast: { type: new GraphQLList(CastType) },
+        availableIn: {
+            type: new GraphQLList(AvailableInType),
+            resolve(root, parent, args) {
+                return root.torrents.map(torrent => ({
+                    quality: `${torrent.quality}.${torrent.type === 'bluray' ? 'BluRay' : torrent.type === 'web' ? 'WEB' : torrent.type}`,
+                    url: torrent.url
+                }))
+            }
+        }
     })
 })
 
@@ -102,7 +112,8 @@ const MovieType = new GraphQLObjectType({
 //             character_name
 //             url_small_image
 //             imdb_code
-//           }
+//         }
+//         qualities
 //     }
 // }
 

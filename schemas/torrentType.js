@@ -18,9 +18,9 @@ const TorrentType = new GraphQLObjectType({
         seeds: { type: GraphQLString },
         peers: { type: GraphQLString },
         size: { type: GraphQLString },
-        size_bytes: { type: GraphQLInt },
+        size_bytes: { type: GraphQLString },
         date_uploaded: { type: GraphQLString },
-        date_uploaded_unix: { type: GraphQLInt }
+        date_uploaded_unix: { type: GraphQLString }
     })
 })
 
