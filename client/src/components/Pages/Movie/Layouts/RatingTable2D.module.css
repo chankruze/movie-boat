@@ -7,10 +7,11 @@ Copyright (c) Geekofia 2020 and beyond
 
 .td {
   padding-right: 1rem;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 .td svg {
     color: var(--bg-green);
+    margin-top: -2px;
     vertical-align: middle;
 }

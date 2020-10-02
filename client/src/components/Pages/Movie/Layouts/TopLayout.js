@@ -31,7 +31,7 @@ function TopLayout(props) {
         imdb_code,
         rating,
         like_count,
-        medium_cover_image,
+        medium_cover_proxy,
         availableIn
     } = context
 
@@ -51,7 +51,7 @@ function TopLayout(props) {
             {/* Left */}
             <div className={styles.left}>
                 <img className={styles.imgCover}
-                    src={medium_cover_image}
+                    src={medium_cover_proxy}
                     alt={`{movie name} medium cover`} />
                 <button className={styles.btnDownload}>
                     <HiDownload />

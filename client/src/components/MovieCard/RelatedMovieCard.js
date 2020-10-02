@@ -12,14 +12,16 @@ import styles from './RelatedMovieCard.module.css'
 function RelatedMovieCard(props) {
     const { movieData } = props
 
-    const { id, title, medium_cover_image } = movieData
+    const { id, title, medium_cover_proxy } = movieData
 
     return (
-        <Link to={`/movie/${id}`} className={styles.linkMovie}>
-            <img
-                className={styles.coverImg}
-                src={medium_cover_image}
-                alt={`Cover of ${title}`} />
+        <Link to={`/movie/${id}`}>
+            <div className={styles.imgWrapper}>
+                <img
+                    className={styles.coverImg}
+                    src={medium_cover_proxy}
+                    alt={`Cover of ${title}`} />
+            </div>
         </Link>
     )
 }

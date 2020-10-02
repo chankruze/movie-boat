@@ -18,7 +18,7 @@ function MovieCard(props) {
         year,
         rating,
         genres,
-        medium_cover_image
+        medium_cover_proxy
     } = movieData
 
     const ratingFloat = parseFloat(rating).toFixed(1)
@@ -27,7 +27,7 @@ function MovieCard(props) {
         <div className={styles.movieCard}>
             {/* Card Top */}
             <div className={styles.movieCardTop}>
-                <img src={medium_cover_image}
+                <img src={medium_cover_proxy}
                     alt={`cover for ${title}`}
                     className={styles.movieCardCover} />
 
