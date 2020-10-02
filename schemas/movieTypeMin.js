@@ -13,11 +13,18 @@ const MovieTypeMin = new GraphQLObjectType({
     name: 'MovieTypeMinimum',
     fields: () => ({
         id: { type: GraphQLInt },
-        medium_cover_image: { type: GraphQLString },
+        // medium_cover_image: { type: GraphQLString },
         title: { type: GraphQLString },
         year: { type: GraphQLInt },
+        // medium_cover_image: { type: GraphQLString },
         rating: { type: GraphQLString },
-        genres: { type: new GraphQLList(GraphQLString) }
+        genres: { type: new GraphQLList(GraphQLString) },
+        medium_cover_proxy: {
+            type: GraphQLString,
+            resolve(root, parent, args) {
+                return `https://img.${root.medium_cover_image.substr(8)}`
+            }
+        }
     })
 })
 

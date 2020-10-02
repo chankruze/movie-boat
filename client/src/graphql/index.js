@@ -18,7 +18,7 @@ const GQL_LATEST_MOVIES = gql`
         title
         year
         rating
-        medium_cover_image
+        medium_cover_proxy
         genres
       }
     }
@@ -49,7 +49,7 @@ const GQL_MOVIE = gql`
       background_image
       background_image_original
       small_cover_image
-      medium_cover_image
+      medium_cover_proxy
       large_cover_image
       medium_screenshot_image1
       medium_screenshot_image2
@@ -90,7 +90,7 @@ const GQL_RELATED_MOVIES = gql`
     relatedMovies(movie_id: $movie_id) {
       id
       title
-      medium_cover_image
+      medium_cover_proxy
     }
   }
 `

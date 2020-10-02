@@ -37,7 +37,13 @@ const MovieType = new GraphQLObjectType({
         background_image: { type: GraphQLString },
         background_image_original: { type: GraphQLString },
         small_cover_image: { type: GraphQLString },
-        medium_cover_image: { type: GraphQLString },
+        // medium_cover_image: { type: GraphQLString },
+        medium_cover_proxy: {
+            type: GraphQLString,
+            resolve(root, parent, args) {
+                return `https://img.${root.medium_cover_image.substr(8)}`
+            }
+        },
         large_cover_image: { type: GraphQLString },
         medium_screenshot_image1: { type: GraphQLString },
         medium_screenshot_image2: { type: GraphQLString },
