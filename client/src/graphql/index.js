@@ -85,7 +85,18 @@ const GQL_MOVIE = gql`
   }
 `
 
+const GQL_RELATED_MOVIES = gql`
+  query RelatedMoviesQuerry($movie_id: Int!) {
+    relatedMovies(movie_id: $movie_id) {
+      id
+      title
+      medium_cover_image
+    }
+  }
+`
+
 export default Object.freeze({
   GQL_LATEST_MOVIES,
   GQL_MOVIE,
+  GQL_RELATED_MOVIES
 })

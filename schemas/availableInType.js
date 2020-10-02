@@ -8,7 +8,7 @@ Copyright (c) Geekofia 2020 and beyond
 const { GraphQLObjectType, GraphQLString } = require("graphql")
 
 const AvailableInType = new GraphQLObjectType({
-    name: 'QualityType',
+    name: 'AvailableIn',
     fields: () => ({
         quality: { type: GraphQLString },
         url: { type: GraphQLString },
