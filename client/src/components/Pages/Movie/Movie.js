@@ -12,9 +12,14 @@ import styles from './Movie.module.css'
 
 import querries from '../../../graphql/'
 
+// create a movie context to access data from children
+export const MovieContext = React.createContext()
+
 function Movie(props) {
-    const { movie_id } = props.match.params
-    console.log(movie_id)
+    // grab the movie id
+    const { movie_id } = props.match.params // string
+
+    // GET movie details
     const { loading, error, data } = useQuery(querries.GQL_MOVIE, { variables: { movie_id: parseInt(movie_id) } })
 
     if (loading) {
@@ -34,15 +39,17 @@ function Movie(props) {
     }
 
     if (data && data.movie) {
-        console.log(`Fetched details for "${data.movie.title}" at ${(new Date()).toLocaleTimeString().slice(0, 7)}`)
+        console.log(`Fetched details for "${data.movie.title}" at ${(new Date()).toLocaleTimeString()}`)
     }
 
     return (
         <div className={styles.moviePage}>
-            {/* Top */}
-            <TopLayout />
-            {/* Middle */}
-            {/* Bottom */}
+            <MovieContext.Provider value={data.movie}>
+                {/* Top */}
+                <TopLayout />
+                {/* Middle */}
+                {/* Bottom */}
+            </MovieContext.Provider>
         </div>
     )
 }
