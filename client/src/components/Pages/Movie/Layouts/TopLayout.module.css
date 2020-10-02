@@ -6,21 +6,107 @@ Copyright (c) Geekofia 2020 and beyond
 */
 
 .topWrapper {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-around;
-    color: #fff;
+  margin: 0;
+  margin-top: 2rem;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  color: #fff;
 }
+
+/* Left */
 
 .topWrapper .left {
-    
+  display: flex;
+  flex-direction: column;
 }
+
+.left .imgCover {
+  border: 2px solid #fff;
+}
+
+.left .btnDownload {
+  border: 0;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  font-size: 1.1rem;
+  color: #fff;
+  background-color: var(--bg-green);
+  text-align: center;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.left .btnDownload svg {
+  vertical-align: middle;
+  margin-right: 5px;
+  margin-top: -2px;
+}
+
+/* Middle Portion */
 
 .topWrapper .middle {
-
+  display: flex;
+  flex-direction: column;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
-.topWrapper .right {
+.middle .title{
+    margin-top: 0;
+    font-size: 2.5rem;
+}
 
+.middle .yearGenres {
+  font-size: 1.2rem;
+  /* line-height: 1.8rem; */
+  font-family: "Arimo", sans-serif;
+}
+
+.middle .qualityWrapper {
+  /* display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; */
+  margin-top: 0.5rem;
+}
+
+.middle .qualityWrapper a {
+  padding: 0rem 0.5rem 0.2rem 0.5rem;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #525252;
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
+  background-color: #272727;
+}
+
+.middle .subtitleWrapper {
+  margin-top: 2rem;
+}
+
+.middle .subtitleWrapper a {
+  padding: 0rem 0.5rem 0.2rem 0.5rem;
+  color: #fff;
+  background-color: #272727;
+  border: 1px solid #525252;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.middle .subtitleWrapper a svg {
+  vertical-align: middle;
+  margin-right: 5px;
+  margin-top: -2px;
+}
+
+.middle .ratingWrapper {
+    margin-top: 2rem;
+}
+
+/* Right */
+
+.topWrapper .right {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }

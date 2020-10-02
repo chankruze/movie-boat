@@ -77,6 +77,10 @@ const GQL_MOVIE = gql`
         url_small_image
         imdb_code
       }
+      availableIn {
+        quality
+        url
+      }
     }
   }
 `
