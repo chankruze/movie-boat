@@ -6,15 +6,15 @@ Copyright (c) Geekofia 2020 and beyond
 */
 
 import React from 'react'
-import { FaDownload, FaMagnet } from 'react-icons/fa'
+import { FaDownload } from 'react-icons/fa'
 import { trackers } from '../../../../../utils'
 
 import styles from './Torrent.module.css'
 
-// https://yts.mx/assets/images/website/2160p-quality.svg
-
 function Torrent(props) {
     const { torrent, title } = props
+    const [bgUrl, setBgUrl] = React.useState('')
+
     const {
         url,
         hash,
@@ -23,17 +23,22 @@ function Torrent(props) {
         availableIn
     } = torrent
 
-    const encReduceTrackers = (accumulator, currentUrl) => accumulator + `&tr=${encodeURIComponent(currentUrl)}`
-    const magnetURI = `magnet:?xt=urn:btih:${hash}&dn=${encodeURIComponent(title)}&tr=${trackers.reduce(encReduceTrackers)}`
+    // This is epic
+    // import quality tv bg urls
+    import(`../../../../../assets/svgs/${quality}-tv.svg`)
+        .then((res) => setBgUrl(res.default))
 
-    const bg = `https://yts.mx/assets/images/website/${quality}-quality.svg`
+    // encode, add `&tr=` to each tracker url 
+    const encReduceTrackers = (accumulator, currentUrl) => accumulator + `&tr=${encodeURIComponent(currentUrl)}`
+    // reduce trackers array to siblge string using above logic
+    const magnetURI = `magnet:?xt=urn:btih:${hash}&dn=${encodeURIComponent(title)}&tr=${trackers.reduce(encReduceTrackers)}`
 
     return (
         <div className={styles.dlWrapper}>
             {/* Reolution bg logo */}
             <div className={styles.resBg}
                 style={{
-                    background: `url(${bg}) no-repeat center bottom`,
+                    background: `url(${bgUrl}) no-repeat center bottom`,
                 }}>
             </div>
 
