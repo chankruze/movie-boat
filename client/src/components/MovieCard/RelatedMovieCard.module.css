@@ -6,21 +6,22 @@ Copyright (c) Geekofia 2020 and beyond
 */
 
 .imgWrapper {
-    width: 120px;
-    /* height: 175px; */
+    width: 128px;
+    height: 188px;
     overflow: hidden;
     border: 4px solid #fff;
     margin-bottom: 0.5rem;
+    transition: all 300ms ease-in-out;
 }
 
 .coverImg {
     width: 120px;
-    /* width: 120px; */
+    filter: grayscale(100%);
     /* height: 138px; */
     /* Point Zoom */
     /* transform-origin: 75% 85%;
     transition: transform 500ms, filter .5s ease-out; */
-    /* transition: all 300ms ease-in-out; */
+    transition: all 300ms ease-in-out;
 }
 
 .imgWrapper:hover {
@@ -28,5 +29,6 @@ Copyright (c) Geekofia 2020 and beyond
 }
 
 .imgWrapper:hover .coverImg{
-    transform: scale(1.5);
+    filter: grayscale(0);
+    transform: scale(1.1);
 }
