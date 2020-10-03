@@ -13,8 +13,8 @@ import RatingTable2D from './RatingTable2D'
 import Modal from 'react-modal'
 // icons
 import { HiDownload } from 'react-icons/hi'
-import { FaRegHeart, FaRegClock, FaRegStar, FaHourglassStart } from 'react-icons/fa'
-// import { AiFillStar } from 'react-icons/ai'
+import { MdFileDownload, MdTimer, MdStarBorder } from 'react-icons/md'
+import { IoMdHeartEmpty } from 'react-icons/io'
 import { VscChromeClose } from 'react-icons/vsc'
 // CSS
 import styles from './TopLayout.module.css'
@@ -36,6 +36,7 @@ function TopLayout(props) {
         genres,
         imdb_code,
         runtime,
+        download_count,
         rating,
         like_count,
         medium_cover_proxy,
@@ -44,16 +45,20 @@ function TopLayout(props) {
 
     const ratingTableData = [
         {
-            key: <FaHourglassStart />,
-            val: `${runtime / 60 ^ 0}hr ` + runtime % 60 + 'min'
-        },
-        {
-            key: <FaRegHeart />,
+            key: <IoMdHeartEmpty />,
             val: like_count
         },
         {
-            key: <FaRegStar />,
+            key: <MdStarBorder />,
             val: rating
+        },
+        {
+            key: <MdFileDownload />,
+            val: download_count
+        },
+        {
+            key: <MdTimer />,
+            val: `${runtime / 60 ^ 0}hr ` + runtime % 60 + 'min'
         }
     ]
 
