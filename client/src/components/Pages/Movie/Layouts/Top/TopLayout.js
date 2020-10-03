@@ -57,9 +57,12 @@ function TopLayout(props) {
         <div className={styles.topWrapper}>
             {/* Left */}
             <div className={styles.left}>
+                {/* Cover Image */}
                 <img className={styles.imgCover}
                     src={medium_cover_proxy}
                     alt={`{movie name} medium cover`} />
+
+                {/* Download Button */}
                 <button className={styles.btnDownload}
                     onClick={() => setDlModalIsOpen(true)}>
                     <HiDownload />
@@ -78,7 +81,7 @@ function TopLayout(props) {
                     {/* Torrents Wrapper */}
                     <div className={modalStyles.torrentsWrapper}>
                         {
-                            torrents.map((torrent, index) => <Torrent key={index} torrent={torrent} title={title}/>)
+                            torrents.map((torrent, index) => <Torrent key={index} torrent={torrent} title={title} />)
                         }
                     </div>
                 </Modal>
