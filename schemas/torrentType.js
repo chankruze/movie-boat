@@ -20,7 +20,13 @@ const TorrentType = new GraphQLObjectType({
         size: { type: GraphQLString },
         size_bytes: { type: GraphQLString },
         date_uploaded: { type: GraphQLString },
-        date_uploaded_unix: { type: GraphQLString }
+        date_uploaded_unix: { type: GraphQLString },
+        availableIn: {
+            type: GraphQLString,
+            resolve(root, parent, args) {
+                return `${root.quality}.${root.type === 'bluray' ? 'BluRay' : root.type === 'web' ? 'WEB' : root.type}`
+            }
+        }
     })
 })
 

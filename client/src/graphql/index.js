@@ -70,16 +70,13 @@ const GQL_MOVIE = gql`
         size_bytes
         date_uploaded
         date_uploaded_unix
+        availableIn
       }
       cast {
         name
         character_name
         url_small_image
         imdb_code
-      }
-      availableIn {
-        quality
-        url
       }
     }
   }
