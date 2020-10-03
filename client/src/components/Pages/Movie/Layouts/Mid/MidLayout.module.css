@@ -37,11 +37,10 @@ Copyright (c) Geekofia 2020 and beyond
 
 .descriptionWrapper {
     max-width: 700px;
-    margin-right: 0;
+    margin-right: 1.5rem;
     margin-left: auto;
     color: #fff;
     font-size: 1.1rem;
-    padding-left: 4rem;
     /* padding-left: 50px; */
     /* text-align: end; */
     /* align-self: flex-start; */
@@ -50,4 +49,23 @@ Copyright (c) Geekofia 2020 and beyond
 .castWrapper {
     color: #fff;
     margin: auto;
+    margin-left: 1.5rem;
+}
+
+.parentalGuide {
+    margin: 0;
+    color: #00b800;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.parentalGuide:hover {
+    color: #007e00;
+}
+
+.uploadDate {
+    font-size: 1rem;
+    color: #747474;
+    font-style: italic;
 }

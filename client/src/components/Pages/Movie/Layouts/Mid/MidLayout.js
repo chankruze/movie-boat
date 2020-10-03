@@ -22,6 +22,7 @@ Modal.setAppElement('#react-root')
 function MidLayout() {
     const context = React.useContext(MovieContext)
     const [trailerModalIsOpen, setTrailerModalIsOpen] = React.useState(false)
+    const [parentalModalIsOpen, setParentalModalIsOpen] = React.useState(false)
 
     const {
         yt_trailer_code,
@@ -37,6 +38,8 @@ function MidLayout() {
     } = context
 
     const trailerURI = `https://www.youtube.com/embed/${yt_trailer_code}?autoplay=1`
+    const uploadDate = new Date(date_uploaded)
+    const uploadDateFull = `${uploadDate.toDateString()} at ${uploadDate.toLocaleTimeString()}`
 
     return (
         <div className={styles.midWrapper}>
@@ -66,14 +69,38 @@ function MidLayout() {
                 {/* Description */}
                 <div className={styles.descriptionWrapper}>
                     <h2>Synopsis</h2>
-                    {description_full}
+                    
+                    {/* Description Full */}
+                    <p>{description_full}</p>
+
+                    {/* Parental Guide */}
+                    <p className={styles.parentalGuide}
+                        onClick={() => setParentalModalIsOpen(true)}>
+                        Parental Guide
+                    </p>
+                    {/* Parental Guide Modal */}
+                    <Modal className={modalStyles.dlModal}
+                        overlayClassName={modalStyles.dlModalOverlay}
+                        isOpen={parentalModalIsOpen}
+                        contentLabel="Download Modal">
+
+                        {/* Close Button */}
+                        <span className={modalStyles.close} onClick={() => setParentalModalIsOpen(false)}>
+                            <VscChromeClose />
+                        </span>
+
+                        {/* Parental Guide Container */}
+                        <div></div>
+                    </Modal>
+
+                    <p className={styles.uploadDate}><g>Uploaded on:</g><br />{uploadDateFull}</p>
                 </div>
 
                 {/* Cast */}
                 <div className={styles.castWrapper}>
                     <h2>Cast</h2>
                     {
-                        cast ? cast.map((data) => <Person data={data}/>) : ''
+                        cast ? cast.map((data) => <Person data={data} />) : ''
                     }
                 </div>
             </div>
