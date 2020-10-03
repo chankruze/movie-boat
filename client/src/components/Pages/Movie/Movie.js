@@ -11,6 +11,7 @@ import TopLayout from './Layouts/Top/TopLayout'
 import styles from './Movie.module.css'
 
 import querries from '../../../graphql/'
+import MidLayout from './Layouts/Mid/MidLayout'
 
 // create a movie context to access data from children
 export const MovieContext = React.createContext()
@@ -71,6 +72,7 @@ function Movie(props) {
                 {/* Top */}
                 <TopLayout relatedMovies={relMovieData.relatedMovies} />
                 {/* Middle */}
+                <MidLayout />
                 {/* Bottom */}
             </MovieContext.Provider>
         </div>
