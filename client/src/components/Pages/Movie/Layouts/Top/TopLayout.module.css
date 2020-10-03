@@ -11,7 +11,7 @@ Copyright (c) Geekofia 2020 and beyond
   padding: 0;
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   color: #fff;
 }
 
