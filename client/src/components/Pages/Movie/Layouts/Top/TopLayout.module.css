@@ -35,7 +35,7 @@ Copyright (c) Geekofia 2020 and beyond
   padding: 0.5rem;
   font-size: 1.1rem;
   color: #fff;
-  background-color: var(--bg-light-green);
+  background-color: rebeccapurple;
   text-align: center;
   cursor: pointer;
   vertical-align: middle;
@@ -48,7 +48,7 @@ Copyright (c) Geekofia 2020 and beyond
 }
 
 .btnDownload:hover {
-  background-color: rebeccapurple;
+  background-color: var(--bg-light-green);
 }
 
 .btnDownload svg {
@@ -129,7 +129,7 @@ Copyright (c) Geekofia 2020 and beyond
 }
 
 .ratingWrapper {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 
 /* Right */
