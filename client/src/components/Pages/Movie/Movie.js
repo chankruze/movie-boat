@@ -63,7 +63,7 @@ function Movie(props) {
         console.log(`Fetched related movies for "${movieData.movie.title}" at ${(new Date()).toLocaleTimeString()}`)
     }
 
-    document.title = `${movieData.movie.title} (${movieData.movie.year}) | MovieBoat`
+    document.title = `${movieData.movie.title} (${movieData.movie.year}) - MovieBoat`
 
     return (
         <div className={styles.moviePage}>
