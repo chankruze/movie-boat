@@ -1,0 +1,69 @@
+/*
+Author: chankruze (chankruze@geekofia.in)
+Created: Sat Oct 03 2020 01:25:18 GMT+0530 (India Standard Time)
+
+Copyright (c) Geekofia 2020 and beyond
+*/
+
+.dlWrapper {
+  width: 160px;
+  /* max-height: 300px; */
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.dlWrapper + .dlWrapper {
+  border-left: 1px solid #ccc;
+}
+
+.dlWrapper > * {
+  margin: auto;
+}
+
+.resBg {
+  width: 131px;
+  height: 81px;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+
+.pText {
+  margin-top: 0.5rem;
+  font-size: 16px;
+  color: #333;
+  font-weight: 700;
+  font-family: Arimo, Arial, Helvetica, lucida grande, sans-serif;
+  letter-spacing: -0.03em;
+}
+
+.dlBtn {
+  text-decoration: none;
+  color: #fff;
+  background-color: #333;
+  padding: 0.3rem 1rem 0.5rem 1rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 300ms ease-in-out;
+  border: 0;
+}
+
+.dlBtn svg,
+.magnet img {
+  margin-right: 0.3rem;
+}
+
+.dlBtn:hover {
+  background-color: #000;
+}
+
+.magnet img  {
+  margin-top: auto;
+  height: 17px;
+  margin-bottom: auto;
+}

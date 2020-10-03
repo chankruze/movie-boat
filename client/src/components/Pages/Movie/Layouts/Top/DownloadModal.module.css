@@ -1,0 +1,65 @@
+/*
+Author: chankruze (chankruze@geekofia.in)
+Created: Sat Oct 03 2020 12:01:55 GMT+0530 (India Standard Time)
+
+Copyright (c) Geekofia 2020 and beyond
+*/
+
+.dlModal {
+  border: 0;
+  outline: 0;
+  border-radius: 4px;
+  max-width: 600px;
+  min-height: 300px;
+  background: #fff;
+  margin: 5rem auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.dlModalOverlay {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.close {
+  font-size: 1.5rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px;
+}
+
+.torrentsWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* width */
+.dlModal::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.dlModal::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.dlModal::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+.dlModal::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

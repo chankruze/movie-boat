@@ -19,9 +19,9 @@ Copyright (c) Geekofia 2020 and beyond
 .left {
   display: flex;
   flex-direction: column;
-  margin-top: auto;
+  /* margin-top: auto; */
   margin-right: 2rem;
-  margin-bottom: auto;
+  /* margin-bottom: auto; */
 }
 
 .imgCover {
@@ -43,7 +43,7 @@ Copyright (c) Geekofia 2020 and beyond
 }
 
 .btnDownload:hover {
-  background-color: var(--bg-green);
+  background-color: rebeccapurple;
 }
 
 .btnDownload svg {
@@ -66,23 +66,25 @@ Copyright (c) Geekofia 2020 and beyond
 }
 
 .year {
-  color: #c4c4c4;
+  color: #ffffff;
   margin-bottom: 0;
 }
 
 .genres {
-  margin-top: 0.5rem;
+  color: #9b9b9b;
+  margin-top: 0.3rem;
   font-size: 1.2rem;
   /* line-height: 1.8rem; */
   font-family: "Arimo", sans-serif;
 }
 
 .qualityWrapper {
-  /* display: flex;
+  display: flex;
   flex-direction: row;
-  flex-wrap: wrap; */
+  flex-wrap: wrap;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+  align-items: center;
 }
 
 .qualityWrapper a {
@@ -90,6 +92,7 @@ Copyright (c) Geekofia 2020 and beyond
   text-decoration: none;
   color: #fff;
   border: 1px solid #525252;
+  margin-top: 0.5rem;
   margin-left: 0.2rem;
   margin-right: 0.2rem;
   background-color: #272727;
@@ -121,8 +124,7 @@ Copyright (c) Geekofia 2020 and beyond
 }
 
 .ratingWrapper {
-  margin-top: auto;
-  margin-bottom: auto;
+  margin-top: 2rem;
 }
 
 /* Right */
@@ -130,9 +132,9 @@ Copyright (c) Geekofia 2020 and beyond
 .right {
   width: 20%;
   align-items: flex-start;
-  margin-top: auto;
+  /* margin-top: auto; */
   margin-left: 4rem;
-  margin-bottom: auto;
+  /* margin-bottom: auto; */
 }
 
 .relatedMoviesWrapper {
@@ -141,6 +143,7 @@ Copyright (c) Geekofia 2020 and beyond
 }
 
 .titleRelatedMovies {
+  margin-top: 0;
   font-size: 1rem;
 }
 
@@ -168,26 +171,38 @@ Copyright (c) Geekofia 2020 and beyond
   }
 }
 
-/* @-webkit-keyframes flashBorder {
+@-webkit-keyframes flashBorder {
   0% {
-    border-color: red;
+    border-color: #ff4a4a;
+  }
+  25% {
+    border-color: #2fceff;
   }
   50% {
-    border-color: black;
+    border-color: #00ffb3;
+  }
+  75% {
+    border-color: #a0ff12;
   }
   100% {
-    border-color: red;
+    border-color: #ff4a4a;
   }
 }
 
 @-moz-keyframes flashBorder {
   0% {
-    border-color: red;
+    border-color: #ff4a4a;
+  }
+  25% {
+    border-color: #2fceff;
   }
   50% {
-    border-color: black;
+    border-color: #00ffb3;
+  }
+  75% {
+    border-color: #a0ff12;
   }
   100% {
-    border-color: red;
+    border-color: #ff4a4a;
   }
-} */
+}

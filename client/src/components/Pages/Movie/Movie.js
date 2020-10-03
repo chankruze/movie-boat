@@ -7,7 +7,7 @@ Copyright (c) Geekofia 2020 and beyond
 
 import React from 'react'
 import { useQuery } from '@apollo/client'
-import TopLayout from './Layouts/TopLayout'
+import TopLayout from './Layouts/Top/TopLayout'
 import styles from './Movie.module.css'
 
 import querries from '../../../graphql/'
@@ -63,7 +63,7 @@ function Movie(props) {
         console.log(`Fetched related movies for "${movieData.movie.title}" at ${(new Date()).toLocaleTimeString()}`)
     }
 
-    document.title = `${movieData.movie.title} (${movieData.movie.year})`
+    document.title = `${movieData.movie.title} (${movieData.movie.year}) | MovieBoat`
 
     return (
         <div className={styles.moviePage}>
