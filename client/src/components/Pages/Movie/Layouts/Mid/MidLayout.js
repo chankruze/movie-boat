@@ -40,7 +40,7 @@ function MidLayout() {
     const trailerURI = `https://www.youtube.com/embed/${yt_trailer_code}?autoplay=1`
     const uploadDate = new Date(date_uploaded)
     const uploadDateFull = `${uploadDate.toDateString()} at ${uploadDate.toLocaleTimeString()}`
-    const castPersons = cast ? cast.map((data) => <Person data={data} />) : null
+    const castPersons = cast ? cast.map((data, index) => <Person key={index} data={data} />) : null
 
     return (
         <div className={styles.midWrapper}>
@@ -94,7 +94,7 @@ function MidLayout() {
                         <div></div>
                     </Modal>
 
-                    <p className={styles.uploadDate}><g>Uploaded on:</g><br />{uploadDateFull}</p>
+                    <p className={styles.uploadDate}>Uploaded on:<br />{uploadDateFull}</p>
                 </div>
 
                 {/* Cast */}

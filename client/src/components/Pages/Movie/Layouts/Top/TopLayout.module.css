@@ -137,11 +137,11 @@ Copyright (c) Geekofia 2020 and beyond
 
 /* Right */
 
-.right {
-  /* align-items: flex-start; */
-  /* margin-top: auto; */
-  /* margin-bottom: auto; */
-}
+/* .right {
+  align-items: flex-start;
+  margin-top: auto;
+  margin-bottom: auto;
+} */
 
 .relatedMoviesWrapper {
   display: grid;
