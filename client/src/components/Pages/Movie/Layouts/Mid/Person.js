@@ -24,7 +24,7 @@ function Person(props) {
             import('../../../../../assets/images/default_avatar.jpg')
                 .then(res => setImgUrl(res.default))
         } else {
-            setImgUrl(url_small_image)
+            setImgUrl(`https://img.${url_small_image.substr(8)}`)
         }
     }, [])
 
