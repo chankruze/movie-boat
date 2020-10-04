@@ -52,9 +52,9 @@ function MovieCard(props) {
                     <p className={styles.title}>{title}</p>
                     <p className={styles.year}>{year}</p>
                 </div>
-                <div className={styles.right}>
+                {/* <div className={styles.right}>
                     <p className={styles.rating}>{ratingFloat}</p>
-                </div>
+                </div> */}
             </div>
         </div>
     )
