@@ -12,9 +12,258 @@ font-family: 'Poppins', sans-serif;
 font-family: 'Righteous', cursive;
 font-family: 'Roboto', sans-serif; */
 
-/* Main Navbar */
+:root {
+  --navbar-bg-color: rgb(38, 38, 38);
+  --navbar-text-color: rgb(217, 217, 217);
+  --navbar-text-color-focus: rgb(255, 255, 255);
+  --navbar-bg-contrast: rgb(64, 64, 64);
+  --navbar-height: 64px;
+}
+
+/* center element */
+.container {
+  max-width: 1000px;
+  padding-left: 1.4rem;
+  padding-right: 1.4rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* root navbar */
 .navbar {
-  /* Remove user agent stylesheet */
+  left: 0;
+  right: 0;
+  /* position: fixed; */
+  height: var(--navbar-height);
+  background-color: var(--bg-dark);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  z-index: 1;
+}
+
+/* navbar elements wrapper */
+.navbarContainer {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
+}
+
+/* Brand Logo */
+.navbarLogo {
+  /* background-color: var(--navbar-text-color-focus); */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-right: 0.5em;
+}
+
+/* brand name */
+.brandName {
+  font-size: 2rem;
+  font-family: "Alata", sans-serif;
+  text-transform: capitalize;
+  color: var(--color-green);
+  /* background: -webkit-linear-gradient(#c31432,#240b36);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+  /* animation: updateGradient 3s linear infinite; */
+}
+
+/* list item */
+.navbarItem {
+  margin: 0.4em;
+  width: 100%;
+}
+
+/* links */
+.homeLink,
+.navbarLink {
+  color: var(--navbar-text-color);
+  transition: color 0.2s ease-in-out;
+  text-decoration: none;
+  display: flex;
+  font-weight: 400;
+  align-items: center;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+/* links (focus, hover) */
+.homeLink:focus,
+.homeLink:hover {
+  color: var(--navbar-text-color-focus);
+}
+
+/* routes/links (a/Link) */
+.navbarLink {
+  justify-content: center;
+  width: 100%;
+  padding: 0.4em 0.8em;
+  border-radius: 5px;
+}
+
+/* routes/links (a/Link) (focus, hover) */
+.navbarLink:focus,
+.navbarLink:hover {
+  color: var(--navbar-text-color-focus);
+  background-color: var(--navbar-bg-contrast);
+}
+
+/* hamburger button */
+.navbarToggle {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* hamburger bar */
+.iconBar {
+  display: block;
+  width: 25px;
+  height: 4px;
+  margin: 2px;
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out,
+    opacity 0.2s ease-in-out;
+  background-color: var(--navbar-text-color);
+}
+
+/* hamburger button (focus, hover) */
+.navbarToggle:focus .iconBar,
+.navbarToggle:hover .iconBar {
+  background-color: var(--navbar-text-color-focus);
+}
+
+/* when nav bar is opened increase width for diagonal length from [=] to [X] */
+.navbar.opened .navbarToggle .iconBar:first-child,
+.navbar.opened .navbarToggle .iconBar:last-child {
+  position: absolute;
+  margin: 0;
+  width: 30px;
+}
+
+/* rotate first bar to +45° */
+.navbar.opened .navbarToggle .iconBar:first-child {
+  transform: rotate(45deg);
+}
+
+/* hide middle bar */
+.navbar.opened .navbarToggle .iconBar:nth-child(2) {
+  opacity: 0;
+}
+
+/* rotate first bar to -45° */
+.navbar.opened .navbarToggle .iconBar:last-child {
+  transform: rotate(-45deg);
+}
+
+/* nav links menu (not opened) */
+.navbarMenu {
+  top: var(--navbar-height);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  opacity: 0;
+  color: black;
+  visibility: hidden;
+  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+}
+
+/* nav links menu (opened) */
+.navbar.opened .navbarMenu {
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 1;
+  visibility: visible;
+}
+
+/* nav links unordered list (not opened) */
+.navbarLinks {
+  left: 0;
+  right: 0;
+  max-height: 0;
+  list-style-type: none;
+  overflow: hidden;
+  position: absolute;
+  background-color: var(--navbar-bg-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* detached */
+  margin: 1.4rem;
+  border-radius: 5px;
+  box-shadow: 0 0px 20px rgba(0, 0, 0, 0.3);
+  /* margin: 1.4rem;
+  border-radius: 5px; 
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3); */
+}
+
+/* nav links unordered list (opened) */
+.navbar.opened .navbarLinks {
+  padding: 1em;
+  max-height: none;
+}
+
+/* Desktop UI */
+
+/* when width is 700px and above */
+@media screen and (min-width: 700px) {
+  /* hides hamburger button */
+  .navbarToggle {
+    display: none;
+  }
+
+  /* show menu whether it's opened or not */
+  .navbar .navbarMenu,
+  .navbar.opened .navbarMenu {
+    visibility: visible;
+    opacity: 1;
+    position: static;
+    display: block;
+    height: 100%;
+  }
+
+  /* nav links unordered list (not opened) */
+  .navbar .navbarLinks,
+  .navbar.opened .navbarLinks {
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    position: static; /* from fixed to static */
+    flex-direction: row; /* from column to row */
+    list-style-type: none;
+    max-height: max-content;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+  }
+  .navbar .navbarLink,
+  .navbar.opened .navbarLink {
+    font-family: Poppins;
+    color: var(--color-dark-link);
+  }
+
+  .navbar .navbarLink:hover,
+  .navbar .navbarLink:active,
+  .navbar.opened .navbarLink:hover,
+  .navbar.opened .navbarLink:active {
+    color: #fff;
+    transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
+    text-shadow: 1px 1px 10px #fff;
+  }
+
+  .navbar .navbarLink:last-child {
+    margin-right: 0;
+  }
+}
+
+/* Main Navbar */
+/* .navbarDesktop {
   margin: 0;
   padding: 0;
   background-color: var(--bg-primary);
@@ -22,21 +271,18 @@ font-family: 'Roboto', sans-serif; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  /* position: fixed; */
   width: 100%;
   max-width: 100vw;
-  /* padding-left: 32px;
-  padding-right: 32px; */
   border-bottom: 1px solid #2f2f2f;
-}
+} */
 
-.navbar.bgDark {
+/* .navbarDesktop.bgDark {
   background-color: var(--bg-dark);
-}
+} */
 
 /* Left Half */
 /* Brand Wrapper */
-.brandWrapper {
+/* .brandWrapper {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -46,11 +292,10 @@ font-family: 'Roboto', sans-serif; */
   color: var(--color-title);
   text-transform: none;
   font-family: "Alata", sans-serif;
-}
+} */
 
 /* Brand Name */
-.brandWrapper .title {
-  /* Remove user agent stylesheet */
+/* .brandWrapper .title {
   margin: 0;
   padding: 0;
   font-size: 2rem;
@@ -58,29 +303,28 @@ font-family: 'Roboto', sans-serif; */
   text-transform: none;
   font-family: "Alata", sans-serif;
   text-transform: capitalize;
-}
+} */
 
 /* SVG icons */
-.brandWrapper .logo {
-  /* Remove user agent stylesheet */
+/* .brandWrapper .logo {
   margin: 0;
   padding: 4px;
   font-size: 3.2rem;
   margin: auto;
-}
+} */
 
 /* Right Half */
 
 /* Links Wrapper */
-.linksWrapper {
+/* .linksWrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   margin: auto;
-}
+} */
 
 /* Links */
-.linksWrapper .link {
+/* .linksWrapper .link {
   margin: 0;
   padding: 0;
   margin-top: auto;
@@ -94,7 +338,7 @@ font-family: 'Roboto', sans-serif; */
   font-family: Poppins;
 }
 
-.navbar.bgDark .linksWrapper .link {
+.navbarDesktop.bgDark .linksWrapper .link {
   color: var(--color-dark-link);
 }
 
@@ -108,5 +352,5 @@ font-family: 'Roboto', sans-serif; */
   color: #fff !important;
   transform: scale(1.1);
   transition: all 0.1s ease-in-out;
-  text-shadow: 2px 2px 10px #fff; /* Xpx Ypx blur color*/
-}
+  text-shadow: 2px 2px 10px #fff;
+} */

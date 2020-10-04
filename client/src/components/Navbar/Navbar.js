@@ -9,29 +9,55 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import styles from './Navbar.module.css'
 import NavItems from './NavItems'
-import { BiCameraMovie } from 'react-icons/bi'
+import logo from '../../assets/images/logo512.png'
 
 function Navbar() {
+    const [isMobileNavOpen, setIsMobileNavOpen] = React.useState(false)
+
+    const handleNavbarToggle = () => {
+        isMobileNavOpen ? closeMobileNavbar() : openMobileNavbar()
+    }
+
+    const openMobileNavbar = () => setIsMobileNavOpen(true)
+    const closeMobileNavbar = () => setIsMobileNavOpen(false)
+
     return (
-        <div className={`${styles.navbar} ${styles.bgDark}`}>
-            <div className={styles.brandWrapper}>
-                {/* <img className={styles.logo}
-                    src="https://avatars3.githubusercontent.com/u/41100705"
-                    alt="Logo" /> */}
-                <h1 className={styles.logo}>
-                    <BiCameraMovie />
-                </h1>
-                <h1 className={styles.title}>
-                    MovieBoat
-                </h1>
-            </div>
-            <div className={styles.linksWrapper}>
-                {
-                    NavItems.map(({ title, path, hoverClass }) => <Link to={path} key={title} className={`${hoverClass} ${styles.link}`}>{title}</Link>)
-                }
-                {/* <FlatNavButton payload={payloadLogin} /> */}
-            </div>
-        </div >
+        // Root Navbar
+        <header className={`${styles.navbar} ${isMobileNavOpen ? styles.opened : ''}`}>
+            {/* Container */}
+            <nav className={`${styles.navbarContainer} ${styles.container}`}>
+                {/* Brand */}
+                <Link to='/' className={styles.homeLink}>
+                    {/* Logo */}
+                    <img src={logo} className={styles.navbarLogo} />
+                    {/* Brand Name */}
+                    <h1 className={styles.brandName}>MovieBoat</h1>
+                </Link>
+
+                {/* Hamburger */}
+                <button className={styles.navbarToggle}
+                    // close/open menu
+                    onClick={handleNavbarToggle}
+                    // handles screen reader accessibility
+                    aria-label={isMobileNavOpen ? "Close navigation menu." : "Open navigation menu"}>
+                    <span className={styles.iconBar}></span>
+                    <span className={styles.iconBar}></span>
+                    <span className={styles.iconBar}></span>
+                </button>
+
+                {/* Links Menu */}
+                <div className={styles.navbarMenu}>
+                    {/* Links List */}
+                    <ul className={styles.navbarLinks} onClick={clickEvent => clickEvent.stopPropagation()}>
+                        {
+                            NavItems.map(({ title, path, hoverClass }) => <li key={title} className={styles.navbarItem}>
+                                <Link to={path} key={title} className={`${hoverClass} ${styles.navbarLink}`} onClick={closeMobileNavbar}>{title}</Link>
+                            </li>)
+                        }
+                    </ul>
+                </div>
+            </nav>
+        </header>
     )
 }
 

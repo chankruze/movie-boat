@@ -11,14 +11,15 @@ const NavItems = [
         path: '/',
         hoverClass: ''
     },
-    {
-        title: 'Trending',
-        path: '/trending',
-        hoverClass: ''
-    },
+
     {
         title: 'Browse',
         path: '/browse',
+        hoverClass: ''
+    },
+    {
+        title: 'Trending',
+        path: '/trending',
         hoverClass: ''
     },
     {
