@@ -10,6 +10,8 @@ import styles from './Person.module.css'
 
 function Person(props) {
     const { data } = props
+    const [imgUrl, setImgUrl] = React.useState('')
+
     const {
         name,
         character_name,
@@ -17,10 +19,19 @@ function Person(props) {
         imdb_code
     } = data
 
+    React.useEffect(() => {
+        if (url_small_image === null) {
+            import('../../../../../assets/images/default_avatar.jpg')
+                .then(res => setImgUrl(res.default))
+        } else {
+            setImgUrl(url_small_image)
+        }
+    }, [])
+
     return (
         <div className={styles.personWrapper}>
             {/* Image */}
-            <img src={url_small_image} alt={name} />
+            <img src={imgUrl} alt={name} />
 
             {/* Real Name as Character Name */}
             <p>
