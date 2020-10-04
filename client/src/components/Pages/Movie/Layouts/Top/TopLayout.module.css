@@ -11,6 +11,7 @@ Copyright (c) Geekofia 2020 and beyond
   padding: 0;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   /* align-items: center; */
   color: #fff;
 }
@@ -27,6 +28,7 @@ Copyright (c) Geekofia 2020 and beyond
 .imgCover {
   border: 4px solid rgb(255, 255, 255);
   animation: flashBorder 2s linear infinite;
+  align-self: flex-end;
 }
 
 .btnDownload {
@@ -62,9 +64,8 @@ Copyright (c) Geekofia 2020 and beyond
 .middle {
   display: flex;
   flex-direction: column;
-  width: 30%;
+  flex-wrap: wrap;
   margin-left: 2rem;
-  margin-right: 2rem;
 }
 
 .title {
@@ -137,8 +138,7 @@ Copyright (c) Geekofia 2020 and beyond
 /* Right */
 
 .right {
-  width: 20%;
-  align-items: flex-start;
+  /* align-items: flex-start; */
   /* margin-top: auto; */
   /* margin-bottom: auto; */
 }
@@ -210,5 +210,69 @@ Copyright (c) Geekofia 2020 and beyond
   }
   100% {
     border-color: #ff4a4a;
+  }
+}
+
+/* 
+  Device: Desktops
+  Screen: 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+}
+
+/* 
+Device: Laptops, Desktops
+Screen: B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+}
+
+/* 
+Device: Tablets, Ipads (portrait)
+Screen: B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+
+/* 
+Device: Tablets, Ipads (landscape)
+Screen: B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+}
+
+/* 
+Device: Low Resolution Tablets, Mobiles (Landscape)
+Screen: B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+}
+
+/* 
+Device: Most of the Smartphones Mobiles (Portrait)
+Screen: B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  /* .topWrapper {
+    justify-content: space-around;
+  } */
+  .middle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .middle {
+    margin: auto;
+    margin-top: 1rem;
   }
 }

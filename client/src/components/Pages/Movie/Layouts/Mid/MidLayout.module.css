@@ -5,17 +5,20 @@ Created: Sat Oct 03 2020 20:18:29 GMT+0530 (India Standard Time)
 Copyright (c) Geekofia 2020 and beyond
 */
 
-.midWrapper{
-    display: flex;
-    flex-direction: column;
-    margin-top: 2rem;
-    margin-bottom: 3rem;
+.midWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
 }
 
 .screenshotsWrapper {
-    margin-top: 1rem;
-    margin-left: auto;
-    margin-right: auto;
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 /* .screenshotsWrapper img + img{
@@ -23,49 +26,101 @@ Copyright (c) Geekofia 2020 and beyond
 } */
 
 .trailerFrame {
-    width: 642px;
-    height: 424px;
+  width: 642px;
+  height: 424px;
 }
 
-
 .infoWrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 1rem;
 }
 
 .descriptionWrapper {
-    max-width: 700px;
-    margin-right: 1.5rem;
-    margin-left: auto;
-    color: #fff;
-    font-size: 1.1rem;
-    /* padding-left: 50px; */
-    /* text-align: end; */
-    /* align-self: flex-start; */
+  max-width: 700px;
+  margin: auto;
+  color: #fff;
+  font-size: 1.1rem;
+  /* padding-left: 50px; */
+  /* text-align: end; */
+  /* align-self: flex-start; */
 }
 
 .castWrapper {
-    color: #fff;
-    margin: auto;
-    margin-left: 1.5rem;
+  color: #fff;
+  margin: auto;
 }
 
 .parentalGuide {
-    margin: 0;
-    color: #00b800;
-    font-size: 1.2rem;
-    cursor: pointer;
-    display: inline-block;
+  margin: 0;
+  color: #00b800;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: inline-block;
 }
 
 .parentalGuide:hover {
-    color: #007e00;
+  color: #007e00;
 }
 
 .uploadDate {
-    font-size: 1rem;
-    color: #747474;
-    font-style: italic;
+  font-size: 1rem;
+  color: #747474;
+  font-style: italic;
+}
+
+/* 
+  Device: Desktops
+  Screen: 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+}
+
+/* 
+Device: Laptops, Desktops
+Screen: B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+}
+
+/* 
+Device: Tablets, Ipads (portrait)
+Screen: B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+
+/* 
+Device: Tablets, Ipads (landscape)
+Screen: B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+}
+
+/* 
+Device: Low Resolution Tablets, Mobiles (Landscape)
+Screen: B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .descriptionWrapper {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
+
+/* 
+Device: Most of the Smartphones Mobiles (Portrait)
+Screen: B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  /* .infoWrapper {
+    justify-content: space-around;
+  } */
 }

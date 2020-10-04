@@ -141,15 +141,15 @@ function TopLayout(props) {
             </div>
 
             {/* Right */}
-            <div className={styles.right}>
+            {/* Related Movies */}
+            {/* <div className={styles.right}>
                 <h2 className={styles.titleRelatedMovies}>Related Movies</h2>
                 <div className={styles.relatedMoviesWrapper}>
-                    {/* Related Movies */}
                     {
                         relatedMovies.map((movieData, index) => <RelatedMovieCard key={index} movieData={movieData} />)
                     }
                 </div>
-            </div>
+            </div> */}
         </div>
     )
 }

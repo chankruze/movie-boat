@@ -40,6 +40,7 @@ function MidLayout() {
     const trailerURI = `https://www.youtube.com/embed/${yt_trailer_code}?autoplay=1`
     const uploadDate = new Date(date_uploaded)
     const uploadDateFull = `${uploadDate.toDateString()} at ${uploadDate.toLocaleTimeString()}`
+    const castPersons = cast ? cast.map((data) => <Person data={data} />) : null
 
     return (
         <div className={styles.midWrapper}>
@@ -69,7 +70,7 @@ function MidLayout() {
                 {/* Description */}
                 <div className={styles.descriptionWrapper}>
                     <h2>Synopsis</h2>
-                    
+
                     {/* Description Full */}
                     <p>{description_full}</p>
 
@@ -97,12 +98,13 @@ function MidLayout() {
                 </div>
 
                 {/* Cast */}
-                <div className={styles.castWrapper}>
-                    <h2>Cast</h2>
-                    {
-                        cast ? cast.map((data) => <Person data={data} />) : ''
-                    }
-                </div>
+                {
+                    cast ? <div className={styles.castWrapper}>
+                                <h2>Cast</h2>
+                                {castPersons}
+                            </div> : ''
+                }
+
             </div>
         </div>
     )
