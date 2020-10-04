@@ -11,21 +11,18 @@ import Movie from './components/Pages/Movie/Movie'
 const Root = () => (
   <BrowserRouter>
     <ApolloProvider client={client}>
-      <React.Fragment>
-        <Navbar />
-        <Switch>
-          {/* Home */}
-          <Route exact path="/" component={Home} />
-          {/* Trending */}
-          {/* <Route exact path="/trending" component={} /> */}
-          {/* Browse */}
-          {/* <Route exact path="/browse" component={} /> */}
-          {/* About */}
-          {/* <Route exact path="/about" component={} /> */}
-          {/* Movie */}
-          <Route exact path="/movie/:movie_id" component={Movie} />
-        </Switch>
-      </React.Fragment>
+      <Navbar />
+      <Switch>
+        {/* Home */}
+        <Route exact path="/" component={Home} />
+        {/* Trending */}
+        {/* <Route exact path="/trending" component={} /> */}
+        {/* Browse */}
+        {/* <Route exact path="/browse" component={} /> */}
+        {/* About */}
+        {/* <Route exact path="/about" component={} /> */}
+        <Route exact path="/movie/:movie_id" component={Movie} />
+      </Switch>
     </ApolloProvider>
   </BrowserRouter>
 )

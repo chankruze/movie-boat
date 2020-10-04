@@ -7,11 +7,12 @@ Copyright (c) Geekofia 2020 and beyond
 
 import React from 'react'
 import { Link } from 'react-router-dom'
-import styles from './Navbar.module.css'
 import NavItems from './NavItems'
-import logo from '../../assets/images/logo512.png'
+import logo from '../../assets/images/logo.png'
 
-function Navbar() {
+import styles from './Navbar.module.css'
+
+const Navbar = () => {
     const [isMobileNavOpen, setIsMobileNavOpen] = React.useState(false)
 
     const handleNavbarToggle = () => {
@@ -50,9 +51,16 @@ function Navbar() {
                     {/* Links List */}
                     <ul className={styles.navbarLinks} onClick={clickEvent => clickEvent.stopPropagation()}>
                         {
-                            NavItems.map(({ title, path, hoverClass }) => <li key={title} className={styles.navbarItem}>
-                                <Link to={path} key={title} className={`${hoverClass} ${styles.navbarLink}`} onClick={closeMobileNavbar}>{title}</Link>
-                            </li>)
+                            NavItems.map(({ title, path, hoverClass }) => (
+                                <li key={title} className={styles.navbarItem}>
+                                    <Link to={path} key={title}
+                                        className={styles.navbarLink}
+                                        activeClassName={styles.active}
+                                        onClick={closeMobileNavbar}>
+                                        {title}
+                                    </Link>
+                                </li>
+                            ))
                         }
                     </ul>
                 </div>

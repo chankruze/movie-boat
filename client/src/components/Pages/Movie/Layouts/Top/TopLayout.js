@@ -20,14 +20,14 @@ import { VscChromeClose } from 'react-icons/vsc'
 import styles from './TopLayout.module.css'
 import modalStyles from './DownloadModal.module.css'
 
-import RelatedMovieCard from '../../../../MovieCard/RelatedMovieCard'
+// import RelatedMovieCard from '../../../../MovieCard/RelatedMovieCard'
 import Torrent from './Torrent'
 
 Modal.setAppElement('#react-root')
 
 function TopLayout(props) {
     const context = React.useContext(MovieContext)
-    const { relatedMovies } = props
+    // const { relatedMovies } = props
     const [dlModalIsOpen, setDlModalIsOpen] = React.useState(false)
 
     const {

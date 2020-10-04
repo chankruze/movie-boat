@@ -30,9 +30,9 @@ function MidLayout() {
         medium_screenshot_image1, // 350x147
         medium_screenshot_image2,
         medium_screenshot_image3,
-        large_screenshot_image1, // 1280x536
-        large_screenshot_image2,
-        large_screenshot_image3,
+        // large_screenshot_image1, // 1280x536
+        // large_screenshot_image2,
+        // large_screenshot_image3,
         date_uploaded,
         cast
     } = context
@@ -62,7 +62,7 @@ function MidLayout() {
                 </span>
 
                 {/* YT Trailer Frame */}
-                <iframe className={styles.trailerFrame} src={trailerURI} frameborder="0" />
+                {/* <iframe className={styles.trailerFrame} src={trailerURI} frameborder="0" /> */}
             </Modal>
 
             {/* Synopsis & Cast */}

@@ -11,7 +11,6 @@ const NavItems = [
         path: '/',
         hoverClass: ''
     },
-
     {
         title: 'Browse',
         path: '/browse',
