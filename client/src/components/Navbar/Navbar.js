@@ -23,7 +23,6 @@ const Navbar = () => {
     const closeMobileNavbar = () => setIsMobileNavOpen(false)
 
     return (
-        // Root Navbar
         <header className={`${styles.navbar} ${isMobileNavOpen ? styles.opened : ''}`}>
             {/* Container */}
             <nav className={`${styles.navbarContainer} ${styles.container}`}>
