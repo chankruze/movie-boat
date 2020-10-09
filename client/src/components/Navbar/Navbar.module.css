@@ -17,7 +17,6 @@ font-family: 'Roboto', sans-serif; */
   --navbar-text-color: rgb(217, 217, 217);
   --navbar-text-color-focus: rgb(255, 255, 255);
   --navbar-bg-contrast: rgb(64, 64, 64);
-  --navbar-height: 64px;
 }
 
 /* center element */
@@ -31,12 +30,14 @@ font-family: 'Roboto', sans-serif; */
 
 /* root navbar */
 .navbar {
+  top: 0;
   left: 0;
   right: 0;
-  /* position: fixed; */
+  position: fixed;
   height: var(--navbar-height);
   background-color: var(--bg-dark);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  z-index: 10;
 }
 
 /* navbar elements wrapper */
@@ -162,20 +163,19 @@ font-family: 'Roboto', sans-serif; */
 
 /* nav links menu (not opened) */
 .navbarMenu {
+  width: 150px;
   top: var(--navbar-height);
-  left: 0;
   right: 0;
   bottom: 0;
   position: fixed;
   opacity: 0;
-  color: black;
   visibility: hidden;
   transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
 }
 
 /* nav links menu (opened) */
 .navbar.opened .navbarMenu {
-  background-color: rgba(0, 0, 0, 0.4);
+  /* background-color: rgba(0, 0, 0, 0.4); */
   opacity: 1;
   visibility: visible;
 }
@@ -193,7 +193,8 @@ font-family: 'Roboto', sans-serif; */
   flex-direction: column;
   align-items: center;
   /* detached */
-  margin: 1.4rem;
+  margin-top: 1rem;
+  margin-right: 1rem;
   border-radius: 5px;
   box-shadow: 0 0px 20px rgba(0, 0, 0, 0.3);
   /* margin: 1.4rem;
@@ -219,6 +220,7 @@ font-family: 'Roboto', sans-serif; */
   /* show menu whether it's opened or not */
   .navbar .navbarMenu,
   .navbar.opened .navbarMenu {
+    width: auto;
     visibility: visible;
     opacity: 1;
     position: static;

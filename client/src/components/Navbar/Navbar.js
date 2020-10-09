@@ -23,7 +23,6 @@ const Navbar = () => {
   const closeMobileNavbar = () => setIsMobileNavOpen(false);
 
   return (
-    // comment
     <header
       className={`${styles.navbar} ${isMobileNavOpen ? styles.opened : ""}`}
     >

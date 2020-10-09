@@ -10,7 +10,8 @@
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
     "dev": "concurrently 'yarn run server' 'yarn run client'",
-    "build": "yarn install && cd client && yarn install && yarn build"
+    "build": "yarn install && cd client && yarn install && yarn build",
+    "test-prod": "yarn build && yarn start"
   },
   "dependencies": {
     "axios": "^0.20.0",
