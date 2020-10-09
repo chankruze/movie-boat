@@ -6,26 +6,26 @@ Copyright (c) Geekofia 2020 and beyond
 */
 
 const NavItems = [
-    {
-        title: 'Home',
-        path: '/',
-        hoverClass: ''
-    },
-    {
-        title: 'Browse',
-        path: '/browse',
-        hoverClass: ''
-    },
-    {
-        title: 'Trending',
-        path: '/trending',
-        hoverClass: ''
-    },
-    {
-        title: 'About',
-        path: '/about',
-        hoverClass: ''
-    }
-]
+  {
+    title: "Home",
+    path: "/",
+    hoverClass: "",
+  },
+  {
+    title: "Browse",
+    path: "/browse",
+    hoverClass: "",
+  },
+  {
+    title: "Trending",
+    path: "/trending",
+    hoverClass: "",
+  },
+  {
+    title: "About",
+    path: "/about",
+    hoverClass: "",
+  },
+];
 
-module.exports = NavItems
+module.exports = NavItems;

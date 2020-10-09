@@ -21,51 +21,50 @@ Copyright (c) Geekofia 2020 and beyond
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
-    .homePage {
-        padding: 0;
-        margin-left: auto;
-        margin-right: auto;
-    }
+  .homePage {
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-    .homePage .movieList > * {
-        justify-self: end;
-      }
+  .homePage .movieList > * {
+    justify-self: end;
+  }
 }
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
-    .homePage {
-        margin-right: auto;
-        margin-left: auto;
-    }
+  .homePage {
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
-    .homePage {
-        margin-right: auto;
-        margin-left: auto;
-    }
+  .homePage {
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
-    .homePage {
-        margin-right: auto;
-        margin-left: auto;
-    }
+  .homePage {
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-
 }
 
 .loader {
-    padding: 0;
-    margin: 0;
-    color: #fff;
-    margin-top: 1.5rem;
-    font-size: 1.5rem;
-    text-align: center;
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+  text-align: center;
 }

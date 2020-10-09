@@ -6,49 +6,49 @@ Copyright (c) Geekofia 2020 and beyond
 */
 
 // for local dev
-require('dotenv').config()
+require("dotenv").config();
 
-const express = require('express'),
-    cors = require('cors'),
-    os = require('os'),
-    path = require('path'),
-    { graphqlHTTP } = require('express-graphql'),
-    schema = require('./schemas')
-
+const express = require("express"),
+  cors = require("cors"),
+  os = require("os"),
+  path = require("path"),
+  { graphqlHTTP } = require("express-graphql"),
+  schema = require("./schemas");
 
 // init express app
-const app = express()
+const app = express();
 // use CORS
-app.use(cors())
+app.use(cors());
 
 // routes if any
 // require('./routes/testRoute')(app)
 
-app.use('/api',
-    graphqlHTTP({
-        schema,
-        graphiql: true,
-    })
-)
+app.use(
+  "/api",
+  graphqlHTTP({
+    schema,
+    graphiql: true,
+  })
+);
 
 // GET endpoints for prod
-if (process.env.NODE_ENV === 'production') {
-    app.use(express.static('public'))
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("public"));
 
-    app.get('*', (req, res) => {
-        res.sendFile(path.resolve(__dirname, 'public', 'index.html'))
-    })
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "public", "index.html"));
+  });
 }
 
 // server port
-const PORT = process.env.PORT
+const PORT = process.env.PORT;
 // network interfaces of os
-const netInterfaces = os.networkInterfaces()
+const netInterfaces = os.networkInterfaces();
 // public server url on network
-const SERVER_URL_NETWORK = netInterfaces.eth0[0].address
+const SERVER_URL_NETWORK = netInterfaces.eth0[0].address;
 
 // create http server instance
 const server = app.listen(PORT, () => {
-    console.log(`[SERVER][I] On Local:   http://localhost:${PORT}`)
-    console.log(`[SERVER][I] On Network: http://${SERVER_URL_NETWORK}:${PORT}`)
-})
+  console.log(`[SERVER][I] On Local:   http://localhost:${PORT}`);
+  console.log(`[SERVER][I] On Network: http://${SERVER_URL_NETWORK}:${PORT}`);
+});

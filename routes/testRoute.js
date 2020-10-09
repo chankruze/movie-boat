@@ -6,9 +6,9 @@ Copyright (c) Geekofia 2020 and beyond
 */
 
 module.exports = (app) => {
-    app.get(`/test`, async (req, res) => {
-        // let match = await Match.findOne({ tourneyId: constants.TOURNEY_ID })
-        // let match = await Match.findById('5f68812ec5d8c610936974eb')
-        return res.status(200).send("Working !")
-    })
-}
+  app.get(`/test`, async (req, res) => {
+    // let match = await Match.findOne({ tourneyId: constants.TOURNEY_ID })
+    // let match = await Match.findById('5f68812ec5d8c610936974eb')
+    return res.status(200).send("Working !");
+  });
+};

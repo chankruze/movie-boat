@@ -1,12 +1,12 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import { ApolloProvider } from '@apollo/client'
-import client from './client'
-import './index.css'
-import Navbar from './components/Navbar/Navbar'
-import Home from './components/Pages/Home/Home'
-import Movie from './components/Pages/Movie/Movie'
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { ApolloProvider } from "@apollo/client";
+import client from "./client";
+import "./index.css";
+import Navbar from "./components/Navbar/Navbar";
+import Home from "./components/Pages/Home/Home";
+import Movie from "./components/Pages/Movie/Movie";
 
 const Root = () => (
   <BrowserRouter>
@@ -25,11 +25,10 @@ const Root = () => (
       </Switch>
     </ApolloProvider>
   </BrowserRouter>
-)
+);
 
-ReactDOM.render(<Root />, document.getElementById('react-root'))
+ReactDOM.render(<Root />, document.getElementById("react-root"));
 
 if (module.hot) {
-  module.hot.accept()
+  module.hot.accept();
 }
-

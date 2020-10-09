@@ -5,57 +5,61 @@ Created: Sun Sep 27 2020 11:44:16 GMT+0530 (India Standard Time)
 Copyright (c) Geekofia 2020 and beyond
 */
 
-const { GraphQLInt, GraphQLString,
-    GraphQLFloat, GraphQLList,
-    GraphQLObjectType } = require('graphql'),
-    TorrentType = require('./torrentType'),
-    CastType = require('./castType')
+const {
+    GraphQLInt,
+    GraphQLString,
+    GraphQLFloat,
+    GraphQLList,
+    GraphQLObjectType,
+  } = require("graphql"),
+  TorrentType = require("./torrentType"),
+  CastType = require("./castType");
 
 // Movie Type
 const MovieType = new GraphQLObjectType({
-    name: 'Movie',
-    fields: () => ({
-        id: { type: GraphQLInt },
-        url: { type: GraphQLString },
-        imdb_code: { type: GraphQLString },
-        title: { type: GraphQLString },
-        title_english: { type: GraphQLString },
-        title_long: { type: GraphQLString },
-        slug: { type: GraphQLString },
-        year: { type: GraphQLInt },
-        rating: { type: GraphQLFloat },
-        runtime: { type: GraphQLFloat },
-        genres: { type: new GraphQLList(GraphQLString) },
-        download_count: { type: GraphQLInt },
-        like_count: { type: GraphQLInt },
-        description_intro: { type: GraphQLString },
-        description_full: { type: GraphQLString },
-        yt_trailer_code: { type: GraphQLString },
-        language: { type: GraphQLString },
-        mpa_rating: { type: GraphQLString },
-        background_image: { type: GraphQLString },
-        background_image_original: { type: GraphQLString },
-        small_cover_image: { type: GraphQLString },
-        // medium_cover_image: { type: GraphQLString },
-        medium_cover_proxy: {
-            type: GraphQLString,
-            resolve(root, parent, args) {
-                return `https://img.${root.medium_cover_image.substr(8)}`
-            }
-        },
-        large_cover_image: { type: GraphQLString },
-        medium_screenshot_image1: { type: GraphQLString },
-        medium_screenshot_image2: { type: GraphQLString },
-        medium_screenshot_image3: { type: GraphQLString },
-        large_screenshot_image1: { type: GraphQLString },
-        large_screenshot_image2: { type: GraphQLString },
-        large_screenshot_image3: { type: GraphQLString },
-        date_uploaded: { type: GraphQLString },
-        date_uploaded_unix: { type: GraphQLInt },
-        torrents: { type: new GraphQLList(TorrentType) },
-        cast: { type: new GraphQLList(CastType) }
-    })
-})
+  name: "Movie",
+  fields: () => ({
+    id: { type: GraphQLInt },
+    url: { type: GraphQLString },
+    imdb_code: { type: GraphQLString },
+    title: { type: GraphQLString },
+    title_english: { type: GraphQLString },
+    title_long: { type: GraphQLString },
+    slug: { type: GraphQLString },
+    year: { type: GraphQLInt },
+    rating: { type: GraphQLFloat },
+    runtime: { type: GraphQLFloat },
+    genres: { type: new GraphQLList(GraphQLString) },
+    download_count: { type: GraphQLInt },
+    like_count: { type: GraphQLInt },
+    description_intro: { type: GraphQLString },
+    description_full: { type: GraphQLString },
+    yt_trailer_code: { type: GraphQLString },
+    language: { type: GraphQLString },
+    mpa_rating: { type: GraphQLString },
+    background_image: { type: GraphQLString },
+    background_image_original: { type: GraphQLString },
+    small_cover_image: { type: GraphQLString },
+    // medium_cover_image: { type: GraphQLString },
+    medium_cover_proxy: {
+      type: GraphQLString,
+      resolve(root, parent, args) {
+        return `https://img.${root.medium_cover_image.substr(8)}`;
+      },
+    },
+    large_cover_image: { type: GraphQLString },
+    medium_screenshot_image1: { type: GraphQLString },
+    medium_screenshot_image2: { type: GraphQLString },
+    medium_screenshot_image3: { type: GraphQLString },
+    large_screenshot_image1: { type: GraphQLString },
+    large_screenshot_image2: { type: GraphQLString },
+    large_screenshot_image3: { type: GraphQLString },
+    date_uploaded: { type: GraphQLString },
+    date_uploaded_unix: { type: GraphQLInt },
+    torrents: { type: new GraphQLList(TorrentType) },
+    cast: { type: new GraphQLList(CastType) },
+  }),
+});
 
 // Req
 // {
@@ -113,4 +117,4 @@ const MovieType = new GraphQLObjectType({
 //     }
 // }
 
-module.exports = MovieType
+module.exports = MovieType;

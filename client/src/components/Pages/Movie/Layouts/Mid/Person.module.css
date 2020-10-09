@@ -16,25 +16,24 @@ Copyright (c) Geekofia 2020 and beyond
 }
 
 .personWrapper img {
-    border-radius: 50%;
+  border-radius: 50%;
 }
 
 .personWrapper p {
-    color: #919191;
+  color: #919191;
 }
 
 .name {
-    margin-left: 0.5rem;
-    color: #ffffff;
-    margin-right: 0.2rem;
-    cursor: pointer;
+  margin-left: 0.5rem;
+  color: #ffffff;
+  margin-right: 0.2rem;
+  cursor: pointer;
 }
 .name:hover {
-    color: #1c86ff;
+  color: #1c86ff;
 }
 
 .charName {
-    color: #fff;
-    margin-left: 0.2rem;
+  color: #fff;
+  margin-left: 0.2rem;
 }
-

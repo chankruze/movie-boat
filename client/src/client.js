@@ -6,40 +6,37 @@ Copyright (c) Geekofia 2020 and beyond
 */
 
 import {
-    ApolloClient,
-    InMemoryCache,
-    HttpLink,
-    ApolloLink
-} from '@apollo/client'
+  ApolloClient,
+  InMemoryCache,
+  HttpLink,
+  ApolloLink,
+} from "@apollo/client";
 
 import { setContext } from "apollo-link-context";
 
 // backend api http link
-const http = new HttpLink({ uri: "/api" })
+const http = new HttpLink({ uri: "/api" });
 
 // delay
 const delay = setContext(
-    request =>
-        new Promise((success, fail) => {
-            setTimeout(() => {
-                success()
-            }, 800)
-        })
-)
+  (request) =>
+    new Promise((success, fail) => {
+      setTimeout(() => {
+        success();
+      }, 800);
+    })
+);
 
 // apollo link
-const link = ApolloLink.from([
-    delay,
-    http
-])
+const link = ApolloLink.from([delay, http]);
 
 // cache
-const cache = new InMemoryCache()
+const cache = new InMemoryCache();
 
 // client
 const client = new ApolloClient({
-    link,
-    cache
-})
+  link,
+  cache,
+});
 
-export default client
+export default client;

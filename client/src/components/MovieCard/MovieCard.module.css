@@ -62,7 +62,7 @@ Copyright (c) Geekofia 2020 and beyond
 }
 
 .movieInfo h2 {
-  font-family: 'Arimo', sans-serif;
+  font-family: "Arimo", sans-serif;
 }
 
 .genresList {
@@ -75,7 +75,7 @@ Copyright (c) Geekofia 2020 and beyond
   font-size: 1.5rem;
   text-transform: capitalize;
   margin-bottom: 0.2rem;
-  font-family: 'Arimo', sans-serif;
+  font-family: "Arimo", sans-serif;
 }
 
 .buttonMovie {
