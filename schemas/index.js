@@ -18,6 +18,7 @@ const {
 const MovieType = require("./movieType");
 const MoviesListType = require("./moviesListType");
 const MovieTypeMin = require("./movieTypeMin");
+const ParentalGuideListType = require("./parentalGuide");
 
 // API URLs
 const API_V2 = "https://yts.mx/api/v2/";
@@ -25,6 +26,7 @@ const LIST_MOVIES = "list_movies.json?";
 const MOVIE_DETAILS =
   "movie_details.json?with_images=true&with_cast=true&movie_id=";
 const RELATED_MOVIES = "movie_suggestions.json?movie_id=";
+const PARENTAL_GUIDES = "movie_parental_guides.json?movie_id=";
 
 // YTS Response Parser
 const parseYTSRes = (res) => {
@@ -88,6 +90,17 @@ const RootQuery = new GraphQLObjectType({
         return axios
           .get(`${API_V2}${RELATED_MOVIES}${args.movie_id}`)
           .then((res) => parseYTSRes(res).movies);
+      },
+    },
+    parentalGuides: {
+      type: ParentalGuideListType,
+      args: {
+        movie_id: { type: GraphQLInt },
+      },
+      resolve(parent, args) {
+        return axios
+          .get(`${API_V2}${PARENTAL_GUIDES}${args.movie_id}`)
+          .then((res) => parseYTSRes(res));
       },
     },
   },

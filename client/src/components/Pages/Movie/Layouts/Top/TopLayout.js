@@ -18,7 +18,8 @@ import { IoMdHeartEmpty } from "react-icons/io";
 import { VscChromeClose } from "react-icons/vsc";
 // CSS
 import styles from "./TopLayout.module.css";
-import modalStyles from "./DownloadModal.module.css";
+import modalStyles from "../../../ModalCommon.module.css";
+import dlModalStyles from "./DownloadModal.module.css";
 
 // import RelatedMovieCard from '../../../../MovieCard/RelatedMovieCard'
 import Torrent from "./Torrent";
@@ -84,8 +85,8 @@ function TopLayout(props) {
 
         {/* Download Modal */}
         <Modal
-          className={modalStyles.dlModal}
-          overlayClassName={modalStyles.dlModalOverlay}
+          className={modalStyles.modal}
+          overlayClassName={modalStyles.modalOverlay}
           isOpen={dlModalIsOpen}
           contentLabel="Download Modal"
         >
@@ -98,7 +99,7 @@ function TopLayout(props) {
           </span>
 
           {/* Torrents Wrapper */}
-          <div className={modalStyles.torrentsWrapper}>
+          <div className={dlModalStyles.torrentsWrapper}>
             {torrents.map((torrent, index) => (
               <Torrent key={index} torrent={torrent} title={title} />
             ))}

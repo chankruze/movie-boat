@@ -14,8 +14,11 @@ import Modal from "react-modal";
 import { VscChromeClose } from "react-icons/vsc";
 // CSS
 import styles from "./MidLayout.module.css";
-import modalStyles from "./TrailerModal.module.css";
+import modalStyles from "../../../ModalCommon.module.css";
+import ytModalStyles from "./TrailerModal.module.css";
+import pgModalStyles from "./ModalParentalGuide.module.css";
 import Person from "./Person";
+import ParentalGuide from "./ParentalGuide";
 
 Modal.setAppElement("#react-root");
 
@@ -25,6 +28,7 @@ function MidLayout() {
   const [parentalModalIsOpen, setParentalModalIsOpen] = React.useState(false);
 
   const {
+    id,
     yt_trailer_code,
     description_full,
     medium_screenshot_image1, // 350x147
@@ -88,23 +92,11 @@ function MidLayout() {
             Parental Guide
           </p>
           {/* Parental Guide Modal */}
-          <Modal
-            className={modalStyles.dlModal}
-            overlayClassName={modalStyles.dlModalOverlay}
-            isOpen={parentalModalIsOpen}
-            contentLabel="Download Modal"
-          >
-            {/* Close Button */}
-            <span
-              className={modalStyles.close}
-              onClick={() => setParentalModalIsOpen(false)}
-            >
-              <VscChromeClose />
-            </span>
-
-            {/* Parental Guide Container */}
-            <div></div>
-          </Modal>
+          <ParentalGuide
+            movieId={id}
+            modalIsOpen={parentalModalIsOpen}
+            setModalIsOpen={setParentalModalIsOpen}
+          />
 
           <p className={styles.uploadDate}>
             Uploaded on:

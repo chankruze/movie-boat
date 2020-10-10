@@ -92,8 +92,21 @@ const GQL_RELATED_MOVIES = gql`
   }
 `;
 
+const GQL_PARENTAL_GUIDES = gql`
+  query ParentalGuidesQuerry($movie_id: Int!) {
+    parentalGuides(movie_id: $movie_id) {
+      parental_guide_count
+      parental_guides {
+        type
+        parental_guide_text
+      }
+    }
+  }
+`;
+
 export default Object.freeze({
   GQL_LATEST_MOVIES,
   GQL_MOVIE,
   GQL_RELATED_MOVIES,
+  GQL_PARENTAL_GUIDES,
 });
