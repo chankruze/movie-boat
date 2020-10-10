@@ -34,27 +34,30 @@ Copyright (c) Geekofia 2020 and beyond
 .infoWrapper {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   flex-wrap: wrap;
   padding: 1rem;
 }
 
 .descriptionWrapper {
   max-width: 700px;
-  margin: auto;
-  margin-right: 1rem;
+  margin-left: auto;
   margin-top: 0;
   color: #fff;
   font-size: 1.1rem;
-  /* padding-left: 50px; */
-  /* text-align: end; */
-  /* align-self: flex-start; */
+  padding-right: 1rem;
+}
+
+.noCast {
+  margin-right: auto;
+  padding-right: 0;
 }
 
 .castWrapper {
   color: #fff;
-  margin: auto;
   margin-top: 0;
   margin-left: 1rem;
+  margin-right: auto;
 }
 
 .castWrapper span{
@@ -103,7 +106,6 @@ Screen: B/w 1025px to 1280px
 
   .castWrapper {
     margin-left: 1rem;
-    /* margin-right: auto; */
   }
 }
 
@@ -115,13 +117,10 @@ Screen: B/w 768px to 1024px
 @media (min-width: 768px) and (max-width: 1024px) {
   .descriptionWrapper {
     width: 50%;
-    margin-left: auto;
-    margin-right: 1rem;
   }
 
   .castWrapper {
     margin-left: 1rem;
-    /* margin-right: auto; */
   }
 }
 
@@ -133,13 +132,10 @@ Screen: B/w 768px to 1024px
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   .descriptionWrapper {
     width: 50%;
-    margin-left: auto;
-    margin-right: 1rem;
   }
 
   .castWrapper {
     margin-left: 1rem;
-    /* margin-right: auto; */
   }
 }
 
@@ -154,10 +150,13 @@ Screen: B/w 481px to 767px
     margin-right: auto;
   }
 
+  .infoWrapper {
+    justify-content: flex-start;
+  }
+
   .castWrapper {
     margin-top: 1rem;
     margin-left: 0rem;
-    /* margin-right: auto; */
   }
 }
 
@@ -167,18 +166,20 @@ Screen: B/w 320px to 479px
 */
 
 @media (min-width: 320px) and (max-width: 480px) {
-  /* .infoWrapper {
-    justify-content: space-around;
-  } */
   .descriptionWrapper {
     margin-top: 1rem;
     margin-right: 0rem;
+    padding: 0;
   }
 
   .castWrapper {
     margin-top: 1rem;
     margin-left: 0rem;
     width: 100%;
+  }
+
+  .screenshotsWrapper > img + img {
+    margin-top: 0.25rem;
   }
 }
 

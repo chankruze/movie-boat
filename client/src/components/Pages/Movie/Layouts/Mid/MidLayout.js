@@ -78,7 +78,11 @@ function MidLayout() {
       {/* Synopsis & Cast */}
       <div className={styles.infoWrapper}>
         {/* Description */}
-        <div className={styles.descriptionWrapper}>
+        <div
+          className={`${styles.descriptionWrapper} ${
+            cast ? "" : styles.noCast
+          }`}
+        >
           <h2 className={styles.sectionTitle}>Synopsis</h2>
 
           {/* Description Full */}
