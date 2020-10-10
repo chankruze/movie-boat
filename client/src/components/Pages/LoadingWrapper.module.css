@@ -1,0 +1,32 @@
+/*
+Author: chankruze (chankruze@geekofia.in)
+Created: Sat Oct 10 2020 01:30:47 GMT+0530 (India Standard Time)
+
+Copyright (c) Geekofia 2020 and beyond
+*/
+
+.loaderWrapper {
+  color: #fff;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.loaderWrapper.error {
+  top: 50%;
+  left: 30%;
+  -ms-transform: translate(-30%, -50%);
+  transform: translate(-30%, -50%);
+}
+
+.loaderWrapper p {
+  margin-block-start: 0em !important;
+  margin-block-end: 0em !important;
+}
+
+.loaderWrapper .errorTxt {
+  color: #f00;
+}

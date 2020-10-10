@@ -12,9 +12,17 @@ import querries from "../../../graphql";
 // components
 import PageNav from "../../PageNav/PageNav";
 import MovieGrid from "../../MovieGrid/MovieGrid";
+import { HashLoader } from "react-spinners";
 
 // CSS
 import styles from "./Home.module.css";
+import loadingStyles from "../LoadingWrapper.module.css";
+import { css } from "@emotion/core";
+import { BiErrorAlt } from "react-icons/bi";
+
+const loaderCss = css`
+  margin: auto;
+`;
 
 function Home() {
   const [limit, setLimit] = React.useState(48);
@@ -30,17 +38,20 @@ function Home() {
 
   if (loading) {
     return (
-      <h4 className={styles.loader}>
-        Fetching Latest Movies...
-        <br />
-        Page {page}
-      </h4>
+      <div className={loadingStyles.loaderWrapper}>
+        <HashLoader color="green" css={loaderCss} />
+      </div>
     );
   }
 
   if (error) {
     console.log(error);
-    return <h2 className={styles.loader}>Error Fetching Latest Movies ;(</h2>;
+    return (
+      <div className={`${loadingStyles.loaderWrapper} ${loadingStyles.error}`}>
+        <BiErrorAlt color="red" size="4rem" />
+        <p className={loadingStyles.errorTxt}>Error Fetching Movies List ;(</p>
+      </div>
+    );
   }
 
   if (data && data.movies) {
