@@ -10,9 +10,12 @@ Copyright (c) Geekofia 2020 and beyond
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  border-bottom: 1px solid #2f2f2f;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+}
+
+.personWrapper > .personWrapper {
+  border-bottom: 1px solid #2f2f2f;
 }
 
 .personWrapper img {

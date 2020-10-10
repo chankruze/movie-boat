@@ -75,7 +75,7 @@ function MidLayout() {
       <div className={styles.infoWrapper}>
         {/* Description */}
         <div className={styles.descriptionWrapper}>
-          <h2>Synopsis</h2>
+          <h2 className={styles.sectionTitle}>Synopsis</h2>
 
           {/* Description Full */}
           <p>{description_full}</p>
@@ -116,7 +116,7 @@ function MidLayout() {
         {/* Cast */}
         {cast ? (
           <div className={styles.castWrapper}>
-            <h2>Cast</h2>
+            <h2 className={styles.sectionTitle}>Cast</h2>
             {castPersons}
           </div>
         ) : (

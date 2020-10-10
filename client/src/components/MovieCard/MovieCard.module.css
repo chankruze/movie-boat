@@ -15,7 +15,7 @@ Copyright (c) Geekofia 2020 and beyond
   color: #fff;
   background-color: rebeccapurple;
   /*box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit;*/
-  box-shadow: 0 0 5px 5px #313131;
+  box-shadow: 0 0 10px 5px #313131;
   min-width: 250px;
   max-width: 260px;
   text-align: start;

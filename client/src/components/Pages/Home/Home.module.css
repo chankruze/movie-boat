@@ -9,8 +9,8 @@ Copyright (c) Geekofia 2020 and beyond
   /* margin */
   margin-top: calc(var(--navbar-height) + 2rem);
   margin-bottom: 2rem;
-  margin-left: 10rem;
-  margin-right: 10rem;
+  /* margin-left: 10rem;
+  margin-right: 10rem; */
   /* padding */
   padding: 0 1rem;
   /* display */
@@ -60,11 +60,3 @@ Copyright (c) Geekofia 2020 and beyond
 @media (min-width: 1200px) {
 }
 
-.loader {
-  padding: 0;
-  margin: 0;
-  color: #fff;
-  margin-top: 1.5rem;
-  font-size: 1.5rem;
-  text-align: center;
-}
