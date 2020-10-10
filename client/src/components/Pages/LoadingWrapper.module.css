@@ -29,4 +29,12 @@ Copyright (c) Geekofia 2020 and beyond
 
 .loaderWrapper .errorTxt {
   color: #f00;
+  font-size: 2rem;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .loaderWrapper .errorTxt {
+    font-size: 1rem;
+  }
+  
 }

@@ -90,8 +90,8 @@ Copyright (c) Geekofia 2020 and beyond
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   align-items: center;
 }
 
@@ -100,14 +100,13 @@ Copyright (c) Geekofia 2020 and beyond
   text-decoration: none;
   color: #fff;
   border: 1px solid #525252;
-  margin-top: 0.5rem;
   margin-left: 0.2rem;
   margin-right: 0.2rem;
   background-color: #272727;
 }
 
 .subtitleWrapper {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 .subtitleWrapper a {

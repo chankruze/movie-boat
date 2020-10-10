@@ -21,8 +21,9 @@ Copyright (c) Geekofia 2020 and beyond
   justify-content: space-around;
 }
 
-.screenshotsWrapper img + img {
-  margin-left: 0.5rem;
+.screenshotsWrapper img {
+  margin-left: 0.25rem;
+  margin-left: 0.25rem;
 }
 
 .trailerFrame {
@@ -54,6 +55,10 @@ Copyright (c) Geekofia 2020 and beyond
   margin: auto;
   margin-top: 0;
   margin-left: 1rem;
+}
+
+.castWrapper span{
+  display: inline-block;
 }
 
 .parentalGuide {
@@ -173,6 +178,7 @@ Screen: B/w 320px to 479px
   .castWrapper {
     margin-top: 1rem;
     margin-left: 0rem;
+    width: 100%;
   }
 }
 

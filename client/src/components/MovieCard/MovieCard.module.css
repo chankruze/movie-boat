@@ -63,18 +63,19 @@ Copyright (c) Geekofia 2020 and beyond
 
 .movieInfo h2 {
   font-family: "Arimo", sans-serif;
+  margin-top: 1rem;
 }
 
 .genresList {
   padding: 0;
   margin: 0;
+  margin-top: 1rem;
   list-style: none;
 }
 
 .genresList li {
   font-size: 1.5rem;
   text-transform: capitalize;
-  margin-bottom: 0.2rem;
   font-family: "Arimo", sans-serif;
 }
 
@@ -82,7 +83,7 @@ Copyright (c) Geekofia 2020 and beyond
   margin: auto;
   padding: 8px 16px 8px 16px;
   text-transform: capitalize;
-  background-color: #3bc500;
+  background-color: #35b100;
   font-size: 1.1rem;
   color: #fff;
   text-decoration: none;
