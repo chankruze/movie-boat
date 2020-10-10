@@ -21,9 +21,9 @@ Copyright (c) Geekofia 2020 and beyond
   justify-content: space-around;
 }
 
-/* .screenshotsWrapper img + img{
-    margin-left: 0.5rem;
-} */
+.screenshotsWrapper img + img {
+  margin-left: 0.5rem;
+}
 
 .trailerFrame {
   width: 642px;
@@ -40,6 +40,7 @@ Copyright (c) Geekofia 2020 and beyond
 .descriptionWrapper {
   max-width: 700px;
   margin: auto;
+  margin-right: 1rem;
   margin-top: 0;
   color: #fff;
   font-size: 1.1rem;
@@ -52,6 +53,7 @@ Copyright (c) Geekofia 2020 and beyond
   color: #fff;
   margin: auto;
   margin-top: 0;
+  margin-left: 1rem;
 }
 
 .parentalGuide {
@@ -88,6 +90,16 @@ Screen: B/w 1025px to 1280px
 */
 
 @media (min-width: 1025px) and (max-width: 1280px) {
+  .descriptionWrapper {
+    width: 50%;
+    margin-left: auto;
+    margin-right: 1rem;
+  }
+
+  .castWrapper {
+    margin-left: 1rem;
+    /* margin-right: auto; */
+  }
 }
 
 /* 
@@ -96,6 +108,16 @@ Screen: B/w 768px to 1024px
 */
 
 @media (min-width: 768px) and (max-width: 1024px) {
+  .descriptionWrapper {
+    width: 50%;
+    margin-left: auto;
+    margin-right: 1rem;
+  }
+
+  .castWrapper {
+    margin-left: 1rem;
+    /* margin-right: auto; */
+  }
 }
 
 /* 
@@ -104,6 +126,16 @@ Screen: B/w 768px to 1024px
 */
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .descriptionWrapper {
+    width: 50%;
+    margin-left: auto;
+    margin-right: 1rem;
+  }
+
+  .castWrapper {
+    margin-left: 1rem;
+    /* margin-right: auto; */
+  }
 }
 
 /* 
@@ -113,8 +145,14 @@ Screen: B/w 481px to 767px
 
 @media (min-width: 481px) and (max-width: 767px) {
   .descriptionWrapper {
-    margin-left: 2rem;
-    margin-right: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .castWrapper {
+    margin-top: 1rem;
+    margin-left: 0rem;
+    /* margin-right: auto; */
   }
 }
 
@@ -127,6 +165,15 @@ Screen: B/w 320px to 479px
   /* .infoWrapper {
     justify-content: space-around;
   } */
+  .descriptionWrapper {
+    margin-top: 1rem;
+    margin-right: 0rem;
+  }
+
+  .castWrapper {
+    margin-top: 1rem;
+    margin-left: 0rem;
+  }
 }
 
 .sectionTitle {
