@@ -65,9 +65,6 @@ function Home() {
     setPage(pageNum < 1 ? data.latestMovies.page_number : pageNum);
   };
 
-  console.log("currentPage", data.latestMovies.page_number);
-  console.log("page", page);
-
   return (
     <div className={styles.homePage}>
       {/* <h1>Latest</h1> */}

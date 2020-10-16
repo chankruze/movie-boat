@@ -32,7 +32,6 @@ const ParentalGuide = (props) => {
   }
 
   if (data && data.parentalGuides) {
-    console.log(data);
     guides = data.parentalGuides.parental_guides;
   }
 
