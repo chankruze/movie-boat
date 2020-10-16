@@ -25,6 +25,7 @@ const loaderCss = css`
 `;
 
 function Home() {
+  // eslint-disable-next-line
   const [limit, setLimit] = React.useState(48);
   const [page, setPage] = React.useState(1);
 

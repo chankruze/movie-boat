@@ -22,7 +22,7 @@ function Person(props) {
     } else {
       setImgUrl(`https://img.${url_small_image.substr(8)}`);
     }
-  }, []);
+  }, [url_small_image]);
 
   return (
     <div className={styles.personWrapper}>
@@ -31,7 +31,15 @@ function Person(props) {
 
       {/* Real Name as Character Name */}
       <p>
-        <span className={styles.name}>{name}</span>
+        <span className={styles.name}>
+          <a
+            href={`https://www.imdb.com/name/nm${imdb_code}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {name}
+          </a>
+        </span>
         as
         <span className={styles.charName}>{character_name}</span>
       </p>

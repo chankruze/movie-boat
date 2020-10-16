@@ -32,8 +32,14 @@ Copyright (c) Geekofia 2020 and beyond
   margin-right: 0.2rem;
   cursor: pointer;
 }
-.name:hover {
+
+.name a {
+  text-decoration: none;
   color: #1c86ff;
+}
+
+.name:hover a {
+  color: #fff;
 }
 
 .charName {
