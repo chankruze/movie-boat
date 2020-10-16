@@ -273,5 +273,6 @@ Screen: B/w 320px to 479px
   .middle {
     margin: auto;
     margin-top: 1rem;
+    padding: 1rem;
   }
 }
