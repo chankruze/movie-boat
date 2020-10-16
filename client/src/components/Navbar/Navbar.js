@@ -31,7 +31,7 @@ const Navbar = () => {
         {/* Brand */}
         <Link to="/" className={styles.homeLink}>
           {/* Logo */}
-          <img src={logo} className={styles.navbarLogo} />
+          <img src={logo} className={styles.navbarLogo} alt="logo" />
           {/* Brand Name */}
           <h1 className={styles.brandName}>MovieBoat</h1>
         </Link>

@@ -17,7 +17,6 @@ import { VscChromeClose } from "react-icons/vsc";
 Modal.setAppElement("#react-root");
 
 const ParentalGuide = (props) => {
-  let divRef;
   let guides = null;
   const { movieId, modalIsOpen, setModalIsOpen } = props;
 

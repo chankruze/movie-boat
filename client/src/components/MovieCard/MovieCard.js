@@ -14,7 +14,7 @@ function MovieCard(props) {
   const { movieData } = props;
   const { id, title, year, rating, genres, medium_cover_proxy } = movieData;
 
-  const ratingFloat = parseFloat(rating).toFixed(1);
+  // const ratingFloat = parseFloat(rating).toFixed(1);
 
   return (
     <div className={styles.movieCard}>
