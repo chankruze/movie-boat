@@ -63,8 +63,7 @@ const Navbar = () => {
                 <Link
                   to={path}
                   key={title}
-                  className={styles.navbarLink}
-                  activeClassName={styles.active}
+                  className={`${styles.navbarLink} ${styles.active}`}
                   onClick={closeMobileNavbar}
                 >
                   {title}

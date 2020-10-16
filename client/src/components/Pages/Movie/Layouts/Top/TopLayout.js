@@ -117,7 +117,7 @@ function TopLayout(props) {
 
         {/* Genres */}
         <h2 className={styles.genres}>
-          {genres.map((genre, index, genresRef) => (
+          {genres && genres.map((genre, index, genresRef) => (
             <span key={index}>
               {genre}
               {index < genresRef.length - 1 ? " / " : ""}

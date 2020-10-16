@@ -10,7 +10,6 @@ import { useQuery } from "@apollo/client";
 import querries from "../../../graphql";
 
 // components
-import PageNav from "../../PageNav/PageNav";
 import MovieGrid from "../../MovieGrid/MovieGrid";
 import { HashLoader } from "react-spinners";
 
@@ -19,6 +18,7 @@ import styles from "./Home.module.css";
 import loadingStyles from "../LoadingWrapper.module.css";
 import { css } from "@emotion/core";
 import { BiErrorAlt } from "react-icons/bi";
+import PageNav2 from "../../PageNav/PageNav2";
 
 const loaderCss = css`
   margin: auto;
@@ -61,6 +61,13 @@ function Home() {
     );
   }
 
+  const updatePage = (pageNum) => {
+    setPage(pageNum < 1 ? data.latestMovies.page_number : pageNum);
+  };
+
+  console.log("currentPage", data.latestMovies.page_number);
+  console.log("page", page);
+
   return (
     <div className={styles.homePage}>
       {/* <h1>Latest</h1> */}
@@ -68,13 +75,21 @@ function Home() {
 
       {/* total_page_count = (movie_count / limit)
                 page_number = current_page */}
-      <PageNav
+      <PageNav2
+        totalPages={Math.floor(
+          data.latestMovies.movie_count / data.latestMovies.limit
+        )}
+        currentPage={data.latestMovies.page_number}
+        updatePage={updatePage}
+      />
+
+      {/* <PageNav
         totalPages={Math.floor(
           data.latestMovies.movie_count / data.latestMovies.limit
         )}
         currentPage={data.latestMovies.page_number}
         setPage={setPage}
-      />
+      /> */}
     </div>
   );
 }

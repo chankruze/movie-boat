@@ -1,0 +1,68 @@
+/*
+Author: chankruze (chankruze@geekofia.in)
+Created: Fri Oct 16 2020 21:34:22 GMT+0530 (India Standard Time)
+
+Copyright (c) Geekofia 2020 and beyond
+*/
+
+:root {
+  --arrow-color: #777;
+  --arrow-margin: 1rem;
+  --arrow-fontsize: 2rem;
+}
+
+.input_group {
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.input_group_area {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.input_group_prefix {
+  color: var(--arrow-color);
+  margin-right: var(--arrow-margin);
+  font-size: var(--arrow-fontsize);
+  cursor: pointer;
+}
+
+.input_group_postfix {
+  color: var(--arrow-color);
+  margin-left: var(--arrow-margin);
+  font-size: var(--arrow-fontsize);
+  cursor: pointer;
+  transition: color 300ms ease-in-out;
+}
+
+.input_group_prefix:hover,
+.input_group_postfix:hover {
+  color: #6edb01;
+}
+
+.input_group input {
+  font-size: 1.5rem;
+  width: 42px;
+  text-align: end;
+  padding: 0.3rem 0rem 0rem 0rem;
+  margin-right: 0.5rem;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--color-green);
+  border-bottom: 2px solid tomato;
+}
+
+.input_group .total {
+  padding: 0.5rem;
+}
+
+.input_group .divider {
+  color: var(--arrow-color);
+}
