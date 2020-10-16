@@ -14,6 +14,8 @@ import modalStyles from "../../../ModalCommon.module.css";
 import pgModalStyles from "./ModalParentalGuide.module.css";
 import { VscChromeClose } from "react-icons/vsc";
 
+Modal.setAppElement("#react-root");
+
 const ParentalGuide = (props) => {
   let divRef;
   let guides = null;

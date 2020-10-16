@@ -5,7 +5,7 @@ Created: Tue Sep 29 2020 14:00:22 GMT+0530 (India Standard Time)
 Copyright (c) Geekofia 2020 and beyond
 */
 
-@import url("https://fonts.googleapis.com/css2?family=Alata&family=Poppins&family=Righteous&family=Roboto&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Alata&family=Poppins&family=Righteous&family=Roboto&display=swap"); */
 
 /* font-family: 'Alata', sans-serif;
 font-family: 'Poppins', sans-serif;
@@ -13,7 +13,8 @@ font-family: 'Righteous', cursive;
 font-family: 'Roboto', sans-serif; */
 
 :root {
-  --navbar-bg-color: rgb(38, 38, 38);
+  --navbar-bg-dark: #1d1d1d;
+  --navbar-bg-black: #000;
   --navbar-text-color: rgb(217, 217, 217);
   --navbar-text-color-focus: rgb(255, 255, 255);
   --navbar-bg-contrast: rgb(64, 64, 64);
@@ -35,9 +36,10 @@ font-family: 'Roboto', sans-serif; */
   right: 0;
   position: fixed;
   height: var(--navbar-height);
-  background-color: var(--bg-dark);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  background-color: var(--navbar-bg-dark);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   z-index: 10;
+  /* border-bottom: 1px solid rgb(0, 255, 149); */
 }
 
 /* navbar elements wrapper */
@@ -188,7 +190,7 @@ font-family: 'Roboto', sans-serif; */
   list-style-type: none;
   overflow: hidden;
   position: absolute;
-  background-color: var(--navbar-bg-color);
+  background-color: var(--navbar-bg-dark);
   display: flex;
   flex-direction: column;
   align-items: center;

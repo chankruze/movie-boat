@@ -8,19 +8,12 @@ Copyright (c) Geekofia 2020 and beyond
 import React from "react";
 // context
 import { MovieContext } from "../../Movie";
-// components
-import Modal from "react-modal";
-// icons
-import { VscChromeClose } from "react-icons/vsc";
+
 // CSS
 import styles from "./MidLayout.module.css";
-import modalStyles from "../../../ModalCommon.module.css";
-import ytModalStyles from "./TrailerModal.module.css";
-import pgModalStyles from "./ModalParentalGuide.module.css";
 import Person from "./Person";
 import ParentalGuide from "./ParentalGuide";
-
-Modal.setAppElement("#react-root");
+import TrailerModal from "./TrailerModal";
 
 function MidLayout() {
   const context = React.useContext(MovieContext);
@@ -41,7 +34,6 @@ function MidLayout() {
     cast,
   } = context;
 
-  const trailerURI = `https://www.youtube.com/embed/${yt_trailer_code}?autoplay=1`;
   const uploadDate = new Date(date_uploaded);
   const uploadDateFull = `${uploadDate.toDateString()} at ${uploadDate.toLocaleTimeString()}`;
   const castPersons = cast
@@ -50,30 +42,36 @@ function MidLayout() {
 
   return (
     <div className={styles.midWrapper}>
+      <div className={styles.trailerMob}>
+        <a className={styles.trailerMobLink} href={`https://www.youtube.com/watch?v=${yt_trailer_code}`}>Watch Trailer</a>
+      </div>
+      <div
+        className={styles.trailer}
+        onClick={() => setTrailerModalIsOpen(true)}
+      >
+        <img
+          src={`https://img.youtube.com/vi/${yt_trailer_code}/mqdefault.jpg`}
+          alt={`${yt_trailer_code} Thumbnail`}
+        />
+        <span className={styles.playWrapper}>
+          {/* <FiPlay className={styles.playBtn}/> */}
+          <span className={styles.playText}>watch</span>
+        </span>
+      </div>
+
+      {/* Trailer Modal */}
+      <TrailerModal
+        ytTrailerCode={yt_trailer_code}
+        modalIsOpen={trailerModalIsOpen}
+        setModalIsOpen={setTrailerModalIsOpen}
+      />
+
       {/* Screenshots */}
       <div className={styles.screenshotsWrapper}>
         <img src={medium_screenshot_image1} alt="medium screenshot 1" />
         <img src={medium_screenshot_image2} alt="medium screenshot 2" />
         <img src={medium_screenshot_image3} alt="medium screenshot 3" />
       </div>
-      {/* Trailer Modal */}
-      <Modal
-        className={modalStyles.dlModal}
-        overlayClassName={modalStyles.dlModalOverlay}
-        isOpen={trailerModalIsOpen}
-        contentLabel="Download Modal"
-      >
-        {/* Close Button */}
-        <span
-          className={modalStyles.close}
-          onClick={() => setTrailerModalIsOpen(false)}
-        >
-          <VscChromeClose />
-        </span>
-
-        {/* YT Trailer Frame */}
-        {/* <iframe className={styles.trailerFrame} src={trailerURI} frameborder="0" /> */}
-      </Modal>
 
       {/* Synopsis & Cast */}
       <div className={styles.infoWrapper}>
