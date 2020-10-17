@@ -1,0 +1,139 @@
+/*
+Author: chankruze (chankruze@geekofia.in)
+Created: Sat Oct 17 2020 13:53:29 GMT+0530 (India Standard Time)
+
+Copyright (c) Geekofia 2020 and beyond
+*/
+
+.browse_root {
+  margin-top: calc(var(--navbar-height) + 2rem);
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.search_section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 2rem;
+}
+
+.search_input_wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.search_input {
+  padding: 10px;
+  border: 0;
+  outline: 0;
+  font-size: 1.2rem;
+  /* width: inherit; */
+  border-radius: 4px;
+  flex: 1;
+}
+
+.filter_div {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.filter_div > * + * {
+  margin-left: 1rem;
+}
+
+.search_btn_wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.search_btn {
+  color: #fff;
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  background: rgb(0, 129, 43);
+  padding: 0.5rem 1rem;
+  border: 0;
+  outline: 0;
+  letter-spacing: 0.5px;
+  font-family: "Poppins", sans-serif;
+  transition: all 300ms ease-in-out;
+  cursor: pointer;
+}
+.search_btn:hover {
+  background: rgba(0, 129, 43, 0.7);
+  box-shadow: 1px 1px 10px#000;
+}
+
+.result_section {
+  display: flex;
+  flex-direction: row;
+}
+
+/* 
+  Device: Desktops
+  Screen: 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+}
+
+/* 
+Device: Laptops, Desktops
+Screen: B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+}
+
+/* 
+Device: Tablets, Ipads (portrait)
+Screen: B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+
+/* 
+Device: Tablets, Ipads (landscape)
+Screen: B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+}
+
+/* 
+Device: Low Resolution Tablets, Mobiles (Landscape)
+Screen: B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+}
+
+/* 
+Device: Most of the Smartphones Mobiles (Portrait)
+Screen: B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .filter_div > * {
+    margin-left: 0;
+    margin-right: 0.5rem;
+  }
+}

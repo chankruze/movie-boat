@@ -1,0 +1,37 @@
+/*
+Author: chankruze (chankruze@geekofia.in)
+Created: Sun Oct 18 2020 00:07:40 GMT+0530 (India Standard Time)
+
+Copyright (c) Geekofia 2020 and beyond
+*/
+
+.movieList {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.safe {
+  color: #009933;
+}
+
+.danger {
+  color: #ff0000;
+}
+
+.movieList h1 span {
+  color: #fff;
+}
+
+.movie_section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.movie_section > * {
+  box-shadow: 0 0 10px 5px rgb(0, 0, 0);
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}

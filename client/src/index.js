@@ -7,6 +7,7 @@ import "./index.css";
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./components/Pages/Home/Home";
 import Movie from "./components/Pages/Movie/Movie";
+import Browse from "./components/Pages/Browse/Browse";
 
 const Root = () => (
   <BrowserRouter>
@@ -18,7 +19,7 @@ const Root = () => (
         {/* Trending */}
         {/* <Route exact path="/trending" component={} /> */}
         {/* Browse */}
-        {/* <Route exact path="/browse" component={} /> */}
+        <Route exact path="/browse" component={Browse} />
         {/* About */}
         {/* <Route exact path="/about" component={} /> */}
         <Route exact path="/movie/:movie_id" component={Movie} />
