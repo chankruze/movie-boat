@@ -67,8 +67,7 @@ function Torrent(props) {
       >
         <img
           src="https://yts.mx/assets/images/website/magnet.svg"
-          alt=""
-          srcset=""
+          alt="mangent"
         />
         Magnet
       </a>

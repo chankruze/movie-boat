@@ -51,8 +51,8 @@ const ParentalGuide = (props) => {
       <div>
         <h3 className={pgModalStyles.header}>Parental Guides</h3>
         {guides
-          ? guides.map((guide) => (
-              <p className={pgModalStyles.wrapper}>
+          ? guides.map((guide, index) => (
+              <p key={index} className={pgModalStyles.wrapper}>
                 <b>{guide.type}: </b>
                 {guide.parental_guide_text}
               </p>
