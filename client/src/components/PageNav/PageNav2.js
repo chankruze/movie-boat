@@ -48,14 +48,14 @@ const PageNav2 = (props) => {
         className={styles.input_group_prefix}
         onClick={() =>
           updatePage(
-            pageNum === currentPage ? parseInt(pageNum - 1) : parseInt(pageNum)
+            pageNum === currentPage && pageNum - 1 > 0 ? parseInt(pageNum - 1) : parseInt(pageNum)
           )
         }
       />
       {/* Mid Input */}
       <div className={styles.input_group_area}>
         <input
-          type="text"
+          type="number"
           value={pageNum}
           placeholder={currentPage}
           maxLength={totalPages.toString().length}
@@ -70,7 +70,7 @@ const PageNav2 = (props) => {
         className={styles.input_group_postfix}
         onClick={() =>
           updatePage(
-            pageNum === currentPage ? parseInt(pageNum + 1) : parseInt(pageNum)
+            pageNum === currentPage && pageNum + 1 <= totalPages ? parseInt(pageNum + 1) : parseInt(pageNum)
           )
         }
       />
