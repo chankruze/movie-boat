@@ -103,6 +103,15 @@ const RootQuery = new GraphQLObjectType({
           .then((res) => parseYTSRes(res));
       },
     },
+    browse: {
+      type: MoviesListType,
+      args: {
+        url: { type: GraphQLString },
+      },
+      resolve(parent, args) {
+        return axios.get(args.url).then((res) => parseYTSRes(res));
+      },
+    },
   },
 });
 

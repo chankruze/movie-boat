@@ -8,7 +8,7 @@ Copyright (c) Geekofia 2020 and beyond
 import { gql } from "@apollo/client";
 
 const GQL_LATEST_MOVIES = gql`
-  query LatestMoviesQuerry($limit: Int!, $page: Int!) {
+  query LatestMoviesQuery($limit: Int!, $page: Int!) {
     latestMovies(limit: $limit, page: $page) {
       movie_count
       limit
@@ -26,7 +26,7 @@ const GQL_LATEST_MOVIES = gql`
 `;
 
 const GQL_MOVIE = gql`
-  query MovieQuerry($movie_id: Int!) {
+  query MovieQuery($movie_id: Int!) {
     movie(movie_id: $movie_id) {
       id
       url
@@ -83,7 +83,7 @@ const GQL_MOVIE = gql`
 `;
 
 const GQL_RELATED_MOVIES = gql`
-  query RelatedMoviesQuerry($movie_id: Int!) {
+  query RelatedMoviesQuery($movie_id: Int!) {
     relatedMovies(movie_id: $movie_id) {
       id
       title
@@ -93,7 +93,7 @@ const GQL_RELATED_MOVIES = gql`
 `;
 
 const GQL_PARENTAL_GUIDES = gql`
-  query ParentalGuidesQuerry($movie_id: Int!) {
+  query ParentalGuidesQuery($movie_id: Int!) {
     parentalGuides(movie_id: $movie_id) {
       parental_guide_count
       parental_guides {
@@ -104,9 +104,28 @@ const GQL_PARENTAL_GUIDES = gql`
   }
 `;
 
+const GQL_BROWSE_MOVIES = gql`
+  query BrowseMoviesQuery($url: String) {
+    browse(url: $url) {
+      movie_count
+      limit
+      page_number
+      movies {
+        id
+        title
+        year
+        rating
+        medium_cover_proxy
+        genres
+      }
+    }
+  }
+`;
+
 export default Object.freeze({
   GQL_LATEST_MOVIES,
   GQL_MOVIE,
   GQL_RELATED_MOVIES,
   GQL_PARENTAL_GUIDES,
+  GQL_BROWSE_MOVIES,
 });
