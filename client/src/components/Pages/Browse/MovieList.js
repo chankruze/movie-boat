@@ -14,11 +14,6 @@ import styles from "./MovieList.module.css";
 function MovieList(props) {
   const { movieData, setPageParent } = props;
   const { movies, movie_count, limit, page_number } = movieData;
-  const [page, setPage] = React.useState(page_number);
-
-  React.useEffect(() => {
-    setPageParent(page);
-  }, [page, setPageParent]);
 
   return (
     <div className={styles.movieList}>
@@ -31,8 +26,8 @@ function MovieList(props) {
       {movie_count !== 0 ? (
         <PageNav2
           totalPages={Math.ceil(movie_count / limit)}
-          currentPage={page}
-          updatePage={setPage}
+          currentPage={page_number}
+          updatePage={setPageParent}
         />
       ) : (
         ""
@@ -48,8 +43,8 @@ function MovieList(props) {
       {movie_count !== 0 ? (
         <PageNav2
           totalPages={Math.ceil(movie_count / limit)}
-          currentPage={page}
-          updatePage={setPage}
+          currentPage={page_number}
+          updatePage={setPageParent}
         />
       ) : (
         ""
