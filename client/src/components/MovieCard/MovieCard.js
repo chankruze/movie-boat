@@ -34,7 +34,7 @@ function MovieCard(props) {
             {rating} / 10
           </h2>
           <ul className={styles.genresList}>
-            {genres && genres.map((gen, index) => (
+            {genres && genres.slice(0, 4).map((gen, index) => (
               <li key={index}>{gen}</li>
             ))}
           </ul>
