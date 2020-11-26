@@ -9,6 +9,8 @@ import React from "react";
 import { FaDownload } from "react-icons/fa";
 import { trackers } from "../../../../../utils";
 
+import magnetLogo from "../../../../../assets/svgs/magnet.svg";
+
 import styles from "./Torrent.module.css";
 
 function Torrent(props) {
@@ -65,10 +67,7 @@ function Torrent(props) {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img
-          src="https://yts.mx/assets/images/website/magnet.svg"
-          alt="mangent"
-        />
+        <img src={magnetLogo} alt="mangent" />
         Magnet
       </a>
     </div>
